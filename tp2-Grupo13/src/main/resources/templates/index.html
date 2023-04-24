@@ -3,14 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <title>Pagina de inicio</title>
+<style type="text/css">
+#navegador ul{
+   list-style-type: none;
+   text-align: center;
+}
+#navegador li{
+   display: inline;
+   text-align: center;
+   margin: 0 80px 0 0;
+}
+#navegador li a {
+   padding: 8px 28px 8px 28px;
+   color: #666;
+   background-color: #eeeeee;
+   border: 1px solid #ccc;
+   text-decoration: none;
+}
+
+   </style>
 </head>
-<body>
+<body background=../static/images/fondo.jpg>
 	<header>
 		<h1>Ladau</h1>
-		<img src="../static/images/huella.png" alt="icono de las huellas de una mascota" tittle="Huella de animal" width="64" height="64">
+		<img src="../static/images/header.jpg" alt="banner de la pagina" tittle="animales" width="1300" height="190">
 	</header>
 
-	<nav>
+	<div id="navegador">
 		<ul>
 			<li><a href="./index.html">Inicio</a></li>
 			<li><a href="./productos.html">Productos</a></li>
@@ -19,33 +38,49 @@
 			<li><a href="./sucursales.html">Sucursales</a></li>
 			<li><a href="./contacto.html">Contactanos</a></li>
 		</ul>
-	</nav>
+	</div>
 
 	<section>
-		<article>
-			<p>Tenemos como objetivo principal ofrecer un <strong>servicio
+			<div><p><img src="../static/images/index_articulo1.jpg" align="left" >
+				<font size=6>
+				<br>
+				Tenemos como objetivo principal ofrecer un <strong>servicio
 				de calidad</strong>, brindando el cuidado y atención adecuado a sus mascotas.
-				Además de esto, existen otros puntos de suma importancia.</p>
-		</article>
+				Además de esto, existen otros puntos de suma importancia.</font></p>
+				<br>
+				<br>
+			</div>
 
-		<article>
-			<p>En primer lugar, la <strong>seguridad</strong>.Para ello contamos con
+		<div>
+			<p><img src="../static/images/index_articulo2.jpg" align="left">
+			<font size=6>
+			<br>
+			En primer lugar, la <strong>seguridad</strong>.Para ello contamos con
 			personal capacitado y con experiencia. Ademas de las herramientas y
-			recursos necesarios para la seguridad de tu mascota.</p>
-		</article>
+			recursos necesarios para la seguridad de tu mascota.</font></p>
+			<br>
+		</div>
 
-		<article>
-			<p>Otro objetivo es la <strong>puntualidad</strong> y la <strong>flexibilidad</strong>.Los
+		<div>
+			<p><img src="../static/images/index_articulo3.jpg" align="left">
+			<font size=6>
+			<br>
+			Otro objetivo es la <strong>puntualidad</strong> y la <strong>flexibilidad</strong>.Los
 			dueños confían en que se cumpla con los horarios establecidos para
 			los paseos, y tambien la adaptación a situaciones que no se pueden
-			prever.</p>
-		</article>
-		<article>
-			<p>Finalmente, otro objetivo es la <strong>comunicación</strong>, estar
+			prever.</font></p>
+			<br>
+		</div>
+		<div>
+			<p><img src="../static/images/index_articulo4.jpg" align="left">
+			<font size=6>
+			<br>
+			Finalmente, otro objetivo es la <strong>comunicación</strong>, estar
 			en contacto con los dueños para mantenerlos informados sobre lo
 			relacionado con los paseos, o alguna necesidad de su mascota,por ello
-			recomendamos la utilización de nuestra app.</p>
-		</article>
+			recomendamos la utilización de nuestra app.</font></p>
+			<br>
+		</div>
 	</section>
 	
 	<aside>
