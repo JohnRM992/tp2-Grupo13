@@ -62,3 +62,11 @@ li a:hover {
 .active {
   background-color: #04AA6D;
 }
+ .formulario {
+    display: grid;
+    place-items: center;
+    width: 300px ;
+    left: 40%;
+    top: 40%;
+  position: relative;
+}
