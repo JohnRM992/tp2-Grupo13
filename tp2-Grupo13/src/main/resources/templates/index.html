@@ -1,93 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Pagina de inicio</title>
-<style type="text/css">
-#navegador ul{
-   list-style-type: none;
-   text-align: center;
-}
-#navegador li{
-   display: inline;
-   text-align: center;
-   margin: 0 80px 0 0;
-}
-#navegador li a {
-   padding: 8px 28px 8px 28px;
-   color: #666;
-   background-color: #eeeeee;
-   border: 1px solid #ccc;
-   text-decoration: none;
-}
-
-   </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/estilos.css"/>
+    <title>Practica de CSS</title>
 </head>
-<body background=../static/images/fondo.jpg>
-	<header>
-		<h1>Ladau</h1>
-		<img src="../static/images/header.jpg" alt="banner de la pagina" tittle="animales" width="1300" height="190">
-	</header>
-
-	<div id="navegador">
-		<ul>
-			<li><a href="./index.html">Inicio</a></li>
-			<li><a href="./productos.html">Productos</a></li>
-			<li><a href="./consejos.html">Consejos</a></li>
-			<li><a href="./servicios.html">Servicios</a></li>
-			<li><a href="./sucursales.html">Sucursales</a></li>
-			<li><a href="./contacto.html">Contactanos</a></li>
-		</ul>
-	</div>
-
-	<section>
-			<div><p><img src="../static/images/index_articulo1.jpg" align="left" >
-				<font size=6>
+<body>
+        <div class="grid-container">
+                <div class="grid-item grid-header">
+                    <div id="logo">
+                        <h1 id="tituloh">Paseau</h1>
+                        <img id="huella" src="../static/images/huella.png">
+                        
+                        
+                        
+                            <nav>
+                            <ul>
+                            <li><a  class="active" href="./iniciov2.html">Inicio</a></li>
+                            <li><a href="./productos.html">Productos</a></li>
+                            <li><a href="./consejos.html">Consejos</a></li>
+                            <li><a href="./servicios.html">Servicios</a></li>
+                            <li><a href="./sucursales.html">Sucursales</a></li>
+                            <li><a href="./contacto.html">Contactanos</a></li>
+                        </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="grid-item grid-main">
+                    <section class="section-index">
+                        <article class="article-index">
+                            <img class ="index-image" src="../static/images/index_articulo1.jpg">                
+                				<p class="index-article-text">Tenemos como objetivo principal ofrecer un <strong>servicio
+				                de calidad</strong>, brindando el cuidado y atención adecuado a sus mascotas.
+				                Además de esto, existen otros puntos de suma importancia.</p>
 				<br>
-				Tenemos como objetivo principal ofrecer un <strong>servicio
-				de calidad</strong>, brindando el cuidado y atención adecuado a sus mascotas.
-				Además de esto, existen otros puntos de suma importancia.</font></p>
 				<br>
-				<br>
-			</div>
+                        </article>
+                        <article class="article-index">
+                            <img class="index-image" src="../static/images/index_articulo2.jpg">
+                            <p class="index-article-text">
+                                
+                                <br>
+                                En primer lugar, la <strong>seguridad</strong>.Para ello contamos con
+                                personal capacitado y con experiencia. Ademas de las herramientas y
+                                recursos necesarios para la seguridad de tu mascota.</font></p>
+                                <br>
+                        </article>
+                        <article class="article-index">
+                            <img class="index-image" src="../static/images/index_articulo3.jpg" align="left">
+                            <p class="index-article-text">
+                            <br>
+                                Otro objetivo es la <strong>puntualidad</strong> y la <strong>flexibilidad</strong>.Los
+                                dueños confían en que se cumpla con los horarios establecidos para
+                                los paseos, y tambien la adaptación a situaciones que no se pueden
+                                prever.</font></p>
+                                <br>
+                        </article>
 
-		<div>
-			<p><img src="../static/images/index_articulo2.jpg" align="left">
-			<font size=6>
-			<br>
-			En primer lugar, la <strong>seguridad</strong>.Para ello contamos con
-			personal capacitado y con experiencia. Ademas de las herramientas y
-			recursos necesarios para la seguridad de tu mascota.</font></p>
-			<br>
-		</div>
+                    </section>
+                </div>
+                <div class="grid-item grid-aside">Aside</div>
+                <div class="grid-item grid-footer">
+                    <p><strong><em>Paseau</em></strong> - Diseñado por el <strong>Grupo 13</strong> – Jujuy – República Argentina - </p>
 
-		<div>
-			<p><img src="../static/images/index_articulo3.jpg" align="left">
-			<font size=6>
-			<br>
-			Otro objetivo es la <strong>puntualidad</strong> y la <strong>flexibilidad</strong>.Los
-			dueños confían en que se cumpla con los horarios establecidos para
-			los paseos, y tambien la adaptación a situaciones que no se pueden
-			prever.</font></p>
-			<br>
-		</div>
-		<div>
-			<p><img src="../static/images/index_articulo4.jpg" align="left">
-			<font size=6>
-			<br>
-			Finalmente, otro objetivo es la <strong>comunicación</strong>, estar
-			en contacto con los dueños para mantenerlos informados sobre lo
-			relacionado con los paseos, o alguna necesidad de su mascota,por ello
-			recomendamos la utilización de nuestra app.</font></p>
-			<br>
-		</div>
-	</section>
-	
-	<aside>
-	</aside>
-	
-	<footer>
-		<p><strong><em>Ladau</em></strong> - Diseñado por el <strong>Grupo 13</strong> – Jujuy – República Argentina - </p>
-	</footer>
+                </div>
+        </div>
 </body>
 </html>

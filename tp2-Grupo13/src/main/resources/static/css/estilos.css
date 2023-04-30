@@ -1,72 +1,173 @@
-
-
-*{
-	margin: 0px;
-	padding: 0px;
-}
-
+/* =================ESTILO GENERAL ===========*/
 body{
-  background-image: url("../images/wallpaper.jpg");
-  background-size: cover;
+    
+    /* background: linear-gradient(#00838F,#00BCD4); */
+
+    background-image: url(../images/wallpaper.jpg);
+    background-size: cover;
 }
-header{
-	
-	background-color: #333;
-	color: white; 
-	height: 7em;
-	
-}
-#fondoh{
-	width:4em;
-	height: 4em;
+
+.grid-container{
+    color: white;
+    
+    margin: 10px;
+    display:grid;
+    grid-template-areas: 
+    "header header header"
+    "main main aside"
+    "main main aside"
+    "main main aside"
+    "main main aside"
+    "footer footer footer"
+    ;
+
+    grid-template-rows: repeat(auto-fill,1fr);
+    height:98vh;
+    grid-gap: 7px;
+    
 }
 
 
-footer,#textof{
-	background-color: #333;
+.grid-item{
+    
+}
+.grid-header{
+    border: 2px solid #00BCD4;
+    background-color: #333;
+    border-radius: 6px;
+    grid-area: header;
+    height: 6vh;
+    box-shadow: 4px 3px 10px 0 #212121;
+}
+
+.grid-main{
+    position: relative;
+    top: 12px;
+    /* box-shadow: 4px 3px 10px 0 #212121; */
+    border-radius: 6px;
+    /* background-color: #333; */
+    grid-area: main;
+    height: 80vh;
+    width: 65vw;
+    
+}
+
+.grid-aside{
+    border: 2px solid #00BCD4;
+    position: relative;
+    top: 12px;
+    box-shadow: 4px 3px 10px 0 #212121;
+    background-color: #333;
+    grid-area: aside;
+    border-radius: 6px;
+    height: 80vh;
+    width: 27vw;
+    
+}
+
+.grid-footer{
+    border: 2px solid #00BCD4;
+    box-shadow: 4px 3px 10px 0 #212121;
+    border-radius: 6px;
+    background-color: #333;
+    grid-area: footer;
+    height:6vh;
+    text-align: center;
+    
+}
+
+/*==================================================*/
+
+/* ================BARRA DE NAVEGACION==============*/
+#logo {
 	color: white;
-	text-align: center;
+	height:6vh;
+	display:flex;
+}
+#tituloh{
+    padding:10px 0px 10px 7px;
+    margin:0;   
+}
+#huella{
+	width: 40px;
+	height: 40px;
+	position: relative;
+	top: 7px;
+	left: 5px;
+}
+
+nav {
+    
+    position: relative;
+    width: 200 px;
+    left: 170px;    
+}
+
+nav ul {
+    
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
 	
 	
-}
-
-nav{
-		border-top: 3px solid white;
-}
-ul {
 	
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
+}
+ul{
+    height:100%;
 }
 
-li {
-  float: left;
+nav li {
+	margin-right: 15px;
 }
 
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+nav a {
+		display: block;
+		color: white;
+		text-align: center;
+		padding: 10px 10px 10px 10px;
+		text-decoration: none;
+		position:relative;
+		top: 20%; 
+        transition-property: background;
+        transition-duration: .7s; 
+        height:25px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
 }
-
 
 li a:hover {
-  background-color: #111;
+    transition-property: background;
+    transition-duration: .7s;
+  background-color: #00BCD4;
+  height: 25px;
+}
+/*====================================================*/
+
+/*======================ESTILO INDEX==================*/
+
+.section-index{
+   margin-top: 20px;
+}
+.article-index{
+    box-shadow: 4px 3px 10px 0 #212121;
+    background-color: #333;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 2px solid #00BCD4;
+    border-radius: 7px;
+    height: 200px;
+    display: flex;
 }
 
-.active {
-  background-color: #04AA6D;
+.index-image{
+    margin-top: 10px;
+    border-radius: 5px;
+    width: 220px;
+    height: 180px;
 }
- .formulario {
-    display: grid;
-    place-items: center;
-    width: 300px ;
-    left: 40%;
-    top: 40%;
-  position: relative;
+.index-article-text{
+    
+    padding: 10px;
 }
+/*======================================================*/
