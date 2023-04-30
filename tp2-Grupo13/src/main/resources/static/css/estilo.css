@@ -29,8 +29,9 @@ body{
 
 
 .grid-item{
-    
+        SIN UTILIZAR(?)    
 }
+
 .grid-header{
     border: 2px solid #00BCD4;
     background-color: #333;
@@ -76,6 +77,11 @@ body{
     
 }
 
+
+.aside-text{
+    padding: 10px 5px 0 10px;
+    text-align: center;
+}
 /*==================================================*/
 
 /* ================BARRA DE NAVEGACION==============*/
@@ -170,10 +176,131 @@ li a:hover {
     
     padding: 10px;
 }
+/*=================ESTILO PRODUCTOS========================*/
+
+
+.galeria-productos{
+    list-style: none;
+    height: 75vh;
+    border-radius: 7px;
+    box-shadow: 4px 3px 10px 0 #212121;
+    border: 2px solid #00BCD4;
+    background-color: #333;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr ;
+    margin-top: 30px;
+    padding:0;
+}
+
+.productos-image{
+    margin: 30px 10px 15px 10px;
+    border-radius: 5px;
+    width: 200px;
+    height: 200px;
+    transition-property: filter;
+    transition-duration: .5s;
+    
+    
+}
+
+.productos-image:hover{
+    filter: sepia(2);
+    transition-duration: 1s;
+    cursor:pointer;
+}
+
 /*======================================================*/
 
-/*===================ESTILO PRODUCTOS================== */
-.galeria-productos{
-	display: grid;
-	grid-template-rows: 1fr;
+/*====================ESTILO CONSEJOS===================*/
+.article-consejos{
+    height: 75vh;
+    border-radius: 7px;
+    box-shadow: 4px 3px 10px 0 #212121;
+    border: 2px solid #00BCD4;
+    background-color: #333;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    margin-top: 15px;
+    padding: 10px;
+    padding-left: 15px;;
+}
+
+
+/*==================ESTILO CONTACTANOS======================*/
+.formulario-contacto{
+    height: 75vh;
+    border-radius: 7px;
+    box-shadow: 4px 3px 10px 0 #212121;
+    border: 2px solid #00BCD4;
+    background-color: #333;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    margin-top: 15px;
+    padding: 10px;
+    padding-left: 15px;;
+}
+
+/*=======================================================*/
+
+/*=================ESTILO SUCURSALES======================*/
+.section-sucursales{
+    height: 75vh;
+    border-radius: 7px;
+    box-shadow: 4px 3px 10px 0 #212121;
+    border: 2px solid #00BCD4;
+    background-color: #333;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin-top: 15px;
+    padding: 10px;
+    padding-left: 15px;;
+
+   
+}
+
+
+
+.section-sucursales-ul{
+    list-style: none;
+    height: 60vh;
+    border-radius: 7px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin-top: 30px;
+    padding:0;
+    text-align: center;
+    position: relative;
+    
+
+
+}
+
+.sucursales-image{
+    width: 100px;
+    height: 100px;
+    background-color: #333;
+    margin-bottom: 10px;
+    
+}
+
+/*==========================================================*/
+
+/*========================ESTILO SERVICIOS===================*/
+.section-paseos{
+    height: 75vh;
+    border-radius: 7px;
+    box-shadow: 4px 3px 10px 0 #212121;
+    border: 2px solid #00BCD4;
+    background-color: #333;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin-top: 15px;
+    padding: 10px;
+    padding-left: 15px;;
 }
