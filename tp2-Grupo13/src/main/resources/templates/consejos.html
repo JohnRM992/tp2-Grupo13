@@ -1,31 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://thymeleaf.org" lang="es">
 <head>
 <meta charset="UTF-8">
 <title>Consejos de Salud</title>
-<link rel="stylesheet" href="../static/css/estilo.css"/>
+<link rel="stylesheet" th:href="@{/css/estilo.css}"/>
 </head>
 <body>
 
 	<div class="grid-container">
-	<div class="grid-item grid-header">
-		<div id="logo">
-			<h1 id="tituloh">Paseau</h1>
-			<img id="huella" src="../static/images/huella.png">
-			
-				<nav>
-				<ul>
-				<li><a  class="active" href="./index.html">Inicio</a></li>
-				<li><a href="./productos.html">Productos</a></li>
-				<li><a href="./consejos.html">Consejos</a></li>
-				<li><a href="./servicios.html">Servicios</a></li>
-				<li><a href="./sucursales.html">Sucursales</a></li>
-				<li><a href="./contacto.html">Contactanos</a></li>
-			</ul>
-			</nav>
-		</div>
-	</div>
-
+	 <div class="grid-item grid-header">
+              	<header th:replace="~{layouts/header :: header}">
+              	</header>
+              	</div>
 	<div class="grid-item grid-main">
 		<section class="article-consejos">
 			<article >
@@ -85,10 +71,9 @@
 		<div class="grid-item grid-aside">
 			<div class="aside-text">ASIDE</div>
  		</div>
-			<div class="grid-item grid-footer">
-				<p><strong><em>Paseau</em></strong> - Diseñado por el <strong>Grupo 13</strong> – Jujuy – República Argentina - </p>
-				</div>
-
-			</div>
+			 <div class="grid-item grid-footer">
+                <footer th:replace="layouts/footer :: footer">
+                </footer>
+                </div>
 </body>
 </html>

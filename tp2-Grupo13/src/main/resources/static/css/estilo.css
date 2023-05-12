@@ -29,7 +29,7 @@ body{
 
 
 .grid-item{
-        SIN UTILIZAR(?)    
+/*         SIN UTILIZAR(?)     */
 }
 
 .grid-header{
@@ -105,8 +105,9 @@ body{
 nav {
     
     position: relative;
+    
     width: 200 px;
-    left: 170px;    
+    left: 70em;    
 }
 
 nav ul {
@@ -208,6 +209,35 @@ li a:hover {
     filter: sepia(2);
     transition-duration: 1s;
     cursor:pointer;
+}
+.div-boton{
+	position:relative;
+	display:flex;
+	width: 200%;
+	
+}
+.button{
+  
+  border-radius: 5px;
+  border: 2px solid #00BCD4;
+  color: black;
+  
+  text-align: center;
+  text-decoration: none;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  width: 150px;
+  height: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  position:relative;
+  left: 82%;
+  
+}
+.button:hover{
+	
+	  background-color: #00BCD4;
+  color: white;
 }
 
 /*======================================================*/
