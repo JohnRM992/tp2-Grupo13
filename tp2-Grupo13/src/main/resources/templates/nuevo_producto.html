@@ -5,7 +5,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-  <h1>Nuevo Producto</h1>
+  <h1>Nuevo Product</h1>
     <form th:action="@{/nuevo_producto}" th:object="${formProducto}" method="post">
         <label for="nombre">Nombre:</label>
         <input type="text" th:field="*{nombre}"><br>
