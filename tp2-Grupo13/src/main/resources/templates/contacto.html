@@ -1,70 +1,171 @@
 <!DOCTYPE html>
-<html xmlns:th="http://thymeleaf.org" lang="es">
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
 <head>
 <meta charset="UTF-8">
 <title>Contacto</title>
-<link rel="stylesheet" th:href="@{/css/estilo.css}"/>
+<link rel="stylesheet" th:href="@{/css/estilo.css}" />
 
 <link rel="stylesheet" type="text/css"
 	th:href="@{/webjars/bootstrap/5.2.3/css/bootstrap.min.css}">
 </head>
 <body>
-	<div class="grid-container">
-	 <div class="grid-item grid-header">
-              	<header th:replace="~{layouts/header :: header}">
-              	</header>
-              	</div>
-		<div class="grid-item grid-main">
-			<section class="formulario-contacto">
-				<table class="formulario" border="2" cellspacing="2">
-					<tr>
-				 <td align="left" bgcolor="#11f1f">
-					  <b>Contactenos</b>
-					   <p>3915 Av. General Belgrano, 388-1099999</p>
-					   <p>Lunes a Viernes 9:00 am a 8:00 pm</p>
-					   <p>Sabados y Domingos 9:00 am a 12:30 pm</p>
-					   <a href="contactos@mail.com.ar">contactos@mail.com.ar</a>
-					  <p></p>
-					   <li><a href="https://www.facebook.com">Facebook</a>
-					  <li><a href="https://www.instagram.com">Instagram</a>
-					   <li><a href="https://www.twitter.com">Twitter</a>
-				 </td>
-				 </tr>
-		 <tr>
-			<td bgcolor="#fff1f" >
-			   <p>Nombre
-				  <textarea type="text"placeholder="Ingrese su nombre"></textarea>
-			   </p>
-			   <p>Email
-				  <textarea type="text"placeholder="Ingrese su email"></textarea>
-			   </p>
-			   <p>Ciudad
-				  <textarea type="text"placeholder="Ingrese su ciudad"></textarea>
-			   </p>
-			   <p>Mensaje
-				  <textarea type="text"placeholder="Escriba su mensaje"></textarea>
-			   </p>
-			   <button v-on: click="addItem()" type="enviar">Enviar</button>
-			</td>
-		 </tr>
-		 </table>
-			</section>
-			
-		 
-	
+
+
+	<div class="container-fluid">
+
+		<header th:replace="/layouts/header :: header"> </header>
+
+
+
+		<div class="row m-3 vh-100">
+
+			<!-- INICIO DEL MAIN -->
+			<main class="col-lg-8  col-sm-12 col-md-12 me-auto grid-main mt-5">
+
+				<section class="bg-dark formulario-contacto mt-5 bg-info">
+
+					<div class="row">
+
+						<div class="col text-light ">
+							<p class=" bg-info p-2 fs-4">Contactenos</p>
+							<div class="d-flex justify-content-center"></div>
+							<p class="ps-3 text-center">3915 Av. General Belgrano,
+								388-1099999</p>
+							<p class="ps-3 text-center">Lunes a Viernes 9:00 am a 8:00 pm</p>
+							<p class="ps-3 text-center">Sabados y Domingos 9:00 am a
+								12:30 pm</p>
+
+
+							<div class="d-flex justify-content-center">
+								<a class="ps-3 text-center" href="contactos@gmail.com.ar"><img
+									src="/images/maillogo.svg" alt="Email logo"
+									class="img-fluid bg-dark  me-3" width="40" height="40"></a> <a
+									href="https://www.instagram.com"><img
+									src="/images/instagramlogov2.png" alt="Instagram logo"
+									class="img-fluid bg-dark  me-3 " width="40" height="40"></a>
+								<a href="https://www.twitter.com"><img
+									src="/images/twitterlogo.svg" alt="Twitter logo"
+									class="img-fluid bg-dark  me-3" width="40" height="40"></a> <a
+									href="https://www.twitter.com"><img
+									src="/images/fbooklogo.svg" alt="Facebook logo"
+									class="img-fluid bg-dark  me-3" width="40" height="40"></a>
+
+							</div>
+
+						</div>
+
+
+
+
+
+
+					</div>
+					<!-- FIN DEL DIV CON ROW -->
+
+					<div class="d-flex justify-content-center">
+
+						<form class="row g-3 text-light mt-3">
+
+							<div class="d-flex justify-content-center">
+
+								<div class="col-md-4 col-sm-4 me-2">
+									<label for="inputEmail4" class="form-label">Nombre y
+										Apellido</label> <input type="text" class="form-control">
+								</div>
+
+								<div class="col-md-4 col-sm-4">
+									<label for="inputEmail4" class="form-label">Correo</label> <input
+										type="email" class="form-control" id="inputEmail4">
+								</div>
+
+
+							</div>
+
+
+							<div class="d-flex justify-content-center">
+								<div class="col-md-8 col-sm-8">
+									<label for="inputState" class="form-label">Provincia</label> <select
+										id="inputState" class="form-select">
+										<option selected>Buenos Aires</option>
+										<option selected>Cordoba</option>
+										<option selected>Entre Ríos</option>
+										<option selected>Jujuy</option>
+										<option selected>Tucumán</option>
+										<option>...</option>
+									</select>
+								</div>
+
+							</div>
+							<!-- DIV PROVINCIAS -->
+
+							<div class="d-flex justify-content-center ">
+								<div class="col-md-8 col-sm-8 mb-1">
+									<label for="exampleFormControlTextarea1" class="form-label">Example
+										textarea</label>
+									<textarea class="form-control" id="exampleFormControlTextarea1"
+										rows="3"></textarea>
+								</div>
+
+
+							</div>
+
+						</form>
+
+					</div>
+
+					<div class="d-flex justify-content-center mt-2  mb-2 ">
+						<button type="submit" class="btn btn-info text-light">Enviar</button>
+					</div>
+
+				</section>
+			</main>
+
+
+			<!-- FIN DEL MAIN -->
+
+			<div class="col-lg-3 col-md-12  col-sm-12 mt-5 ms-auto ">
+				<aside class="mt-5  bg-dark grid-aside text-light p-4 ">
+					<p>Uñas : En perros que no desgasten bien hay que cortarlas,
+						sobre todo en los espolones. Para los gatos existen en el mercado
+						accesorios para arañar de forma que así los gatos mantienen las
+						uñas en perfecto estado.</p>
+
+					<p>Revisión dental: oprimiendo suavemente la articulación de la
+						boca con los dedos hará que su gato abra la boca y así podrá ver
+						el estado de sus dientes. Los dientes se limpian solos al masticar
+						el pienso seco o morder juguetes especiales. El sarro y el mal
+						aliento han de ser tratados por el veterinario.</p>
+					<p>
+						<strong>EJERCICIO FISICO</strong>
+					<p>El ejercicio es necesario para permitir al perro expresar
+						conductas caninas normales, como explorar, seguir rastros
+						olorosos, etc. Además se puede aprovechar ese tiempo para mejorar
+						el entrenamiento y estrechar las relaciones mascota-propietario.
+						Los gatos necesitan un ejercicio formal que encuentran fuera de la
+						casa (patios, jardines,…). Cuando el gato permanece continuamente
+						dentro de la casa el propietario debe proporcionar al animal una
+						actividad de juego que satisfaga sus necesidades físicas y
+						mentales.</p>
+				</aside>
+			</div>
+
+
+			<footer th:replace="/layouts/footer :: footer"> </footer>
+
 		</div>
-		
-		<div class="grid-item grid-aside">
-			<div class="aside-text">ASIDE</div>
-	 </div>
-		 <div class="grid-item grid-footer">
-                <footer th:replace="layouts/footer :: footer">
-                </footer>
-                </div>
+
+
 
 	</div>
 
-		<script type="text/javascript"
+
+
+	<script type="text/javascript"
+		th:src="@{/webjars/jquery/3.6.0/jquery.min.js}"></script>
+	<script type="text/javascript"
+		th:src="@{/webjars/popper.js/2.9.3/umd/popper.min.js}"></script>
+	<script type="text/javascript"
 		th:src="@{/webjars/bootstrap/5.2.3/js/bootstrap.min.js}"></script>
+
 </body>
 </html>

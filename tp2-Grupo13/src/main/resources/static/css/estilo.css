@@ -103,7 +103,7 @@ body {
          
                  @media (max-width: 1650px) {
             .grid-aside {
-            height: 70vh;
+            height: 77vh;
             overflow: auto;
 /*             margin-bottom: 150px; */
             
@@ -116,9 +116,13 @@ body {
             }
       		.article-consejos{
       									
-      						height: 69vh;
+      						height: 75vh;
       			            overflow: auto;
       		
+      		}
+      		
+      		.formulario-contacto{
+      				height: 77vh;
       		}
         }
                          @media (min-width: 1651px) {
@@ -139,6 +143,17 @@ body {
       						height: 69vh;
       			            overflow: auto;
       		
+      		}
+      	
+ 			.formulario-contacto{
+ 			
+ 				height: 70vh;
+ 			}
+ 			     		
+      		
+      		
+      		body{
+      			position: fixed;
       		}
         }
         
@@ -326,7 +341,7 @@ body {
 
 /*==================ESTILO CONTACTANOS======================*/
 .formulario-contacto {
-	height: 75vh;
+/* 	height: 70vh; */
 	border-radius: 7px;
 	box-shadow: 4px 3px 10px 0 #212121;
 	border: 2px solid #00BCD4;
@@ -334,9 +349,9 @@ body {
 /* 	display: grid; */
 /* 	grid-template-columns: 1fr; */
 /* 	grid-template-rows: 1fr; */
-	margin-top: 15px;
+/* 	margin-top: 15px; */
 /* 	padding: 10px; */
-	padding-left: 15px;;
+	
 }
 
 /*=======================================================*/
