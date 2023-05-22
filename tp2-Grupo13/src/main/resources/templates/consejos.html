@@ -1,86 +1,140 @@
 <!DOCTYPE html>
-<html xmlns:th="http://thymeleaf.org" lang="es">
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Consejos de Salud</title>
-<link rel="stylesheet" th:href="@{/css/estilo.css}"/>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--  LINK PARA AGREGAR ARCHIVO CSS -->
+<link rel="stylesheet" th:href="@{/css/estilo.css}" />
+<!--  LINK PARA AGREGAR BOOTSTRAP -->
 <link rel="stylesheet" type="text/css"
 	th:href="@{/webjars/bootstrap/5.2.3/css/bootstrap.min.css}">
+
+<title>Inicio</title>
 </head>
 <body>
 
-	<div class="grid-container">
-	 <div class="grid-item grid-header">
-              	<header th:replace="~{layouts/header :: header}">
-              	</header>
-              	</div>
-	<div class="grid-item grid-main">
-		<section class="article-consejos">
-			<article >
-				<h2>Cuidado basico de mascotas(Perros y Gatos)</h2>
-				<p>
-					<strong>ALIMENTACION</strong><br>Tanto para perros como para gatos, es
-					que consuman alimento seco , adaptado a cada etapa de crecimiento y
-					a cada necesidad. Nunca deben consumir alimentos crudos ya que estos
-					podrían ser fuente de enfermedades parasitarias. Es conveniente
-					prevenir la obesidad. Un animal normal debe tener las costillas
-					palpables y forma de reloj de arena visto desde arriba. Actualmente
-					existen numerosas dietas comerciales en el mercado que pueden
-					ayudarnos a evitar la obesidad.
-				</p>
-	
-				<p>
-	
-					
-				<p><strong>HIGIENE</strong><br>
-					Cepillado : La mejor manera de mantener su higiene sin alterar
-					su piel es el cepillado diario.
-	
-				<p>Oídos : Se deben limpiar con una gasa. Hay productos
-					específicos, se echan en el conducto auditivo y se masajea la zona,
-					procediéndose después al limpiado con la gasa.</p>
-	
-				<p>Uñas : En perros que no desgasten bien hay que cortarlas,
-					sobre todo en los espolones. Para los gatos existen en el mercado
-					accesorios para arañar de forma que así los gatos mantienen las uñas
-					en perfecto estado.</p>
-	
-				<p>Revisión dental: oprimiendo suavemente la articulación de la
-					boca con los dedos hará que su gato abra la boca y así podrá ver el
-					estado de sus dientes. Los dientes se limpian solos al masticar el
-					pienso seco o morder juguetes especiales. El sarro y el mal aliento
-					han de ser tratados por el veterinario.</p>
-	
-	
-	
-				<p>
-					<strong>EJERCICIO FISICO</strong>
-				<p>El ejercicio es necesario para permitir al perro expresar
-					conductas caninas normales, como explorar, seguir rastros olorosos,
-					etc. Además se puede aprovechar ese tiempo para mejorar el
-					entrenamiento y estrechar las relaciones mascota-propietario. Los
-					gatos necesitan un ejercicio formal que encuentran fuera de la casa
-					(patios, jardines,…). Cuando el gato permanece continuamente dentro
-					de la casa el propietario debe proporcionar al animal una actividad
-					de juego que satisfaga sus necesidades físicas y mentales.</p>
-	
-			</article>
-		
-	
-		</section>
+	<div class="container-fluid">
+
+		<!-- 			<div class="col-lg-12 grid-header"> -->
+		<header th:replace="/layouts/header :: header"> </header>
+		<!-- 			</div> -->
+
+		<div class="row m-3">
+
+			<!-- INICIO DEL MAIN -->
+			<main class="col-lg-8  col-sm-12 col-md-12 me-auto grid-main mt-4">
+
+				<!-- INICIO DEL SECTION -->
+				<section
+					class="bg-dark text-light section-index article-consejos p-3">
+					<article>
+						<h2>Cuidado basico de mascotas(Perros y Gatos)</h2>
+						<p>
+							<strong>ALIMENTACION</strong><br>Tanto para perros como para
+							gatos, es que consuman alimento seco , adaptado a cada etapa de
+							crecimiento y a cada necesidad. Nunca deben consumir alimentos
+							crudos ya que estos podrían ser fuente de enfermedades
+							parasitarias. Es conveniente prevenir la obesidad. Un animal
+							normal debe tener las costillas palpables y forma de reloj de
+							arena visto desde arriba. Actualmente existen numerosas dietas
+							comerciales en el mercado que pueden ayudarnos a evitar la
+							obesidad.
+						</p>
+
+						<p>
+						<p>
+							<strong>HIGIENE</strong><br> Cepillado : La mejor manera de
+							mantener su higiene sin alterar su piel es el cepillado diario.
+						<p>Oídos : Se deben limpiar con una gasa. Hay productos
+							específicos, se echan en el conducto auditivo y se masajea la
+							zona, procediéndose después al limpiado con la gasa.</p>
+
+						<p>Uñas : En perros que no desgasten bien hay que cortarlas,
+							sobre todo en los espolones. Para los gatos existen en el mercado
+							accesorios para arañar de forma que así los gatos mantienen las
+							uñas en perfecto estado.</p>
+
+						<p>Revisión dental: oprimiendo suavemente la articulación de
+							la boca con los dedos hará que su gato abra la boca y así podrá
+							ver el estado de sus dientes. Los dientes se limpian solos al
+							masticar el pienso seco o morder juguetes especiales. El sarro y
+							el mal aliento han de ser tratados por el veterinario.</p>
+
+
+
+						<p>
+							<strong>EJERCICIO FISICO</strong>
+						<p>El ejercicio es necesario para permitir al perro expresar
+							conductas caninas normales, como explorar, seguir rastros
+							olorosos, etc. Además se puede aprovechar ese tiempo para mejorar
+							el entrenamiento y estrechar las relaciones mascota-propietario.
+							Los gatos necesitan un ejercicio formal que encuentran fuera de
+							la casa (patios, jardines,…). Cuando el gato permanece
+							continuamente dentro de la casa el propietario debe proporcionar
+							al animal una actividad de juego que satisfaga sus necesidades
+							físicas y mentales.</p>
+
+					</article>
+
+
+				</section>
+				<!-- FIN DEL SECTION -->
+			</main>
+			<!-- FIN DEL MAIN -->
+
+
+			<div class="col-lg-3 col-md-12  col-sm-12 mt-5 ms-auto">
+				<aside class="mt-5  bg-dark grid-aside text-light p-4 ">
+					<p>Uñas : En perros que no desgasten bien hay que cortarlas,
+						sobre todo en los espolones. Para los gatos existen en el mercado
+						accesorios para arañar de forma que así los gatos mantienen las
+						uñas en perfecto estado.</p>
+
+					<p>Revisión dental: oprimiendo suavemente la articulación de la
+						boca con los dedos hará que su gato abra la boca y así podrá ver
+						el estado de sus dientes. Los dientes se limpian solos al masticar
+						el pienso seco o morder juguetes especiales. El sarro y el mal
+						aliento han de ser tratados por el veterinario.</p>
+
+
+
+					<p>
+						<strong>EJERCICIO FISICO</strong>
+					<p>El ejercicio es necesario para permitir al perro expresar
+						conductas caninas normales, como explorar, seguir rastros
+						olorosos, etc. Además se puede aprovechar ese tiempo para mejorar
+						el entrenamiento y estrechar las relaciones mascota-propietario.
+						Los gatos necesitan un ejercicio formal que encuentran fuera de la
+						casa (patios, jardines,…). Cuando el gato permanece continuamente
+						dentro de la casa el propietario debe proporcionar al animal una
+						actividad de juego que satisfaga sus necesidades físicas y
+						mentales.</p>
+				</aside>
+			</div>
+
+		</div>
+
+		<!-- 			<div class="col-12 text-light bg-dark mt-5 grid-footer "> -->
+		<footer th:replace="/layouts/footer :: footer"> </footer>
+		<!-- 			</div> -->
+
+
+
 	</div>
 
-		<div class="grid-item grid-aside">
-			<div class="aside-text">ASIDE</div>
- 		</div>
-			 <div class="grid-item grid-footer">
-                <footer th:replace="layouts/footer :: footer">
-                </footer>
-                </div>
-                
-                
-                
-                <script type="text/javascript"
+	<script type="text/javascript"
+		th:src="@{/webjars/jquery/3.6.0/jquery.min.js}"></script>
+	<script type="text/javascript"
+		th:src="@{/webjars/popper.js/2.9.3/umd/popper.min.js}"></script>
+	<script type="text/javascript"
 		th:src="@{/webjars/bootstrap/5.2.3/js/bootstrap.min.js}"></script>
+
+
+
 </body>
 </html>
+
+
+

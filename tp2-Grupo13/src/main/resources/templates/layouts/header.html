@@ -6,25 +6,80 @@
 </head>
 <body>
 	<header th:fragment="header">
-			
-                    <div id="logo">
-                        <h1 id="tituloh">Paseau</h1>
-                        <img id="huella" src="/images/huella.png">
-                        
-                        
-                        
-                            <nav>
-                            <ul>
-                            <li><a  class="active" href="/index">Inicio</a></li>
-                            <li><a href="/productos">Productos</a></li>
-                            <li><a href="/consejos">Consejos</a></li>
-                            <li><a href="/servicios">Servicios</a></li>
-                            <li><a href="/sucursales">Sucursales</a></li>
-                            <li><a href="/contacto">Contactanos</a></li>
-                        </ul>
-                        </nav>
-                    </div>
-               
+		<div class="naveg1 d-none d-lg-block bg-dark  fixed-top">
+			<nav
+				class="navbar navbar-expand-lg bg-body-tertiary  d-none d-lg-block">
+				<div class="container-fluid">
+
+					<a class="navbar-brand text-light " href="#"> <img
+						src="/images/huella.png" alt="Huella" width="30" height="30"
+						class="d-inline-block align-text-top"> Paseaú
+					</a>
+
+					<button class="navbar-toggler" type="button"
+						data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+						aria-controls="navbarTogglerDemo03" aria-expanded="false"
+						aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+
+					<div class="collapse navbar-collapse justify-content-end"
+						id="navbarTogglerDemo03">
+						<ul class="navbar-nav text-light naveg1-ul">
+							<li class="nav-item naveg1-li"><a class="naveg1-a"
+								href="/index">Inicio</a></li>
+							<li class="nav-item naveg1-li"><a class="naveg1-a"
+								href="/productos">Productos</a></li>
+							<li class="nav-item naveg1-li"><a class="naveg1-a"
+								href="/consejos">Consejos</a></li>
+							<li class="nav-item naveg1-li"><a class="naveg1-a"
+								href="/servicios">Servicios</a></li>
+							<li class="nav-item naveg1-li"><a class="naveg1-a"
+								href="/sucursales">Sucursales</a></li>
+							<li class="nav-item naveg1-li"><a class="naveg1-a"
+								href="/contacto">Contactanos</a></li>
+						</ul>
+					</div>
+				</div>
+
+			</nav>
+		</div>
+
+		<div class="naveg2 d-none d-sm-block d-md-block d-lg-none sticky-top">
+			<div class="collapse" id="navbarToggleExternalContent">
+				<div class="bg-dark p-4">
+					<ul class="navbar-nav text-light naveg2-ul">
+						<li class="nav-item naveg2-li"><a class="naveg2-a"
+							href="/index2">Inicio</a></li>
+						<li class="nav-item naveg2-li"><a class="naveg2-a"
+							href="/productos">Productos</a></li>
+						<li class="nav-item naveg2-li"><a class="naveg2-a"
+							href="/consejos">Consejos</a></li>
+						<li class="nav-item naveg2-li"><a class="naveg2-a"
+							href="/servicios">Servicios</a></li>
+						<li class="nav-item naveg2-li"><a class="naveg2-a"
+							href="/sucursales">Sucursales</a></li>
+						<li class="nav-item naveg2-li"><a class="naveg2-a"
+							href="/contacto">Contactanos</a></li>
+					</ul>
+				</div>
+			</div>
+			<nav class="navbar navbar-dark bg-dark">
+				<div class="container-fluid">
+					<button class="navbar-toggler" type="button"
+						data-bs-toggle="collapse"
+						data-bs-target="#navbarToggleExternalContent"
+						aria-controls="navbarToggleExternalContent" aria-expanded="false"
+						aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+				</div>
+			</nav>
+
+
+
+		</div>
+
 	</header>
 </body>
 </html>

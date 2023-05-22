@@ -1,77 +1,127 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="es">
 <head>
-    <meta charset="UTF-8">
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!--  LINK PARA AGREGAR ARCHIVO CSS -->
-	    <link rel="stylesheet" th:href="@{/css/estilo.css}"/>
-	    <!--  LINK PARA AGREGAR BOOTSTRAP -->
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--  LINK PARA AGREGAR ARCHIVO CSS -->
+<link rel="stylesheet" th:href="@{/css/estilo.css}" />
+<!--  LINK PARA AGREGAR BOOTSTRAP -->
 <link rel="stylesheet" type="text/css"
 	th:href="@{/webjars/bootstrap/5.2.3/css/bootstrap.min.css}">
 
-    <title>Practica de CSS</title>
+<title>Inicio</title>
 </head>
 <body>
-		
+
+	<div class="container-fluid">
+
+		<header th:replace="/layouts/header :: header"> </header>
 
 
-        <div class="grid-container">
-        <div class="grid-item grid-header">
-              	<header th:replace="/layouts/header::header">
-              	</header>
-              	</div>
-                <div class="grid-item grid-main">
-                    <section class="section-index">
-                        <article class="article-index">
-                            <img class ="index-image" src="/images/index_articulo1.jpg">                
-                				<p class="index-article-text">Tenemos como objetivo principal ofrecer un <strong>servicio
-				                de calidad</strong>, brindando el cuidado y atención adecuado a sus mascotas.
-				                Además de esto, existen otros puntos de suma importancia.</p>
-				<br>
-				<br>
-                        </article>
-                        <article class="article-index">
-                            <img class="index-image" src="/images/index_articulo2.jpg">
-                            <p class="index-article-text">
-                                
-                                <br>
-                                En primer lugar, la <strong>seguridad</strong>.Para ello contamos con
-                                personal capacitado y con experiencia. Ademas de las herramientas y
-                                recursos necesarios para la seguridad de tu mascota.</p>
-                                <br>
-                        </article>
-                        <article class="article-index">
-                            <img class="index-image" src="/images/index_articulo3.jpg">
-                            <p class="index-article-text">
-                            <br>
-                                Otro objetivo es la <strong>puntualidad</strong> y la <strong>flexibilidad</strong>.Los
-                                dueños confían en que se cumpla con los horarios establecidos para
-                                los paseos, y tambien la adaptación a situaciones que no se pueden
-                                prever.</p>
-                                <br>
-                        </article>
 
-                    </section>
-                </div>
+		<div class="row m-3 vh-100">
 
-                <div class="grid-item grid-aside">
-					<div class="aside-text">ASIDE</div>
-				 </div>
-				 <div class="grid-item grid-footer">
-                <footer th:replace="/layouts/footer :: footer">
-                </footer>
-                </div>
-        </div>
-<!--         	<script type="text/javascript" -->
-<!-- 		th:src="@{/webjars/jquery/3.6.0/jquery.min.js}"></script> -->
-<!-- 	<script type="text/javascript" -->
-<!-- 		th:src="@{/webjars/popper.js/2.9.3/umd/popper.min.js}"></script> -->
+
+
+
+			<!-- INICIO DEL MAIN -->
+			<main class="col-lg-8  col-sm-12 col-md-12 me-auto grid-main mt-5">
+
+				<!-- INICIO DEL SECTION -->
+				<section class="text-light section-index mt-5">
+
+					<article class="bg-dark article-index">
+						<img class="img-fluid index-image"
+							src="/images/index_articulo1.jpg">
+						<p class="index-article-text">
+							Tenemos como objetivo principal ofrecer un <strong>servicio
+								de calidad</strong>, brindando el cuidado y atención adecuado a sus
+							mascotas. Además de esto, existen otros puntos de suma
+							importancia.
+						</p>
+
+					</article>
+
+					<article class="bg-dark article-index">
+						<img class="img-fluid index-image"
+							src="/images/index_articulo2.jpg">
+						<p class="index-article-text">
+
+							En primer lugar, la <strong>seguridad</strong>.Para ello contamos
+							con personal capacitado y con experiencia. Ademas de las
+							herramientas y recursos necesarios para la seguridad de tu
+							mascota.
+						</p>
+						<br>
+					</article>
+
+					<article class="bg-dark article-index">
+						<img class="img-fluid index-image"
+							src="/images/index_articulo3.jpg">
+						<p class="index-article-text">
+							Otro objetivo es la <strong>puntualidad</strong> y la <strong>flexibilidad</strong>.Los
+							dueños confían en que se cumpla con los horarios establecidos
+							para los paseos, y tambien la adaptación a situaciones que no se
+							pueden prever.
+						</p>
+						<br>
+					</article>
+
+				</section>
+				<!-- FIN DEL SECTION -->
+			</main>
+			<!-- FIN DEL MAIN -->
+
+			<div class="col-lg-3 col-md-12  col-sm-12 mt-5 ms-auto ">
+				<aside class="mt-5  bg-dark grid-aside text-light p-4 ">
+					<p>Uñas : En perros que no desgasten bien hay que cortarlas,
+						sobre todo en los espolones. Para los gatos existen en el mercado
+						accesorios para arañar de forma que así los gatos mantienen las
+						uñas en perfecto estado.</p>
+
+					<p>Revisión dental: oprimiendo suavemente la articulación de la
+						boca con los dedos hará que su gato abra la boca y así podrá ver
+						el estado de sus dientes. Los dientes se limpian solos al masticar
+						el pienso seco o morder juguetes especiales. El sarro y el mal
+						aliento han de ser tratados por el veterinario.</p>
+					<p>
+						<strong>EJERCICIO FISICO</strong>
+					<p>El ejercicio es necesario para permitir al perro expresar
+						conductas caninas normales, como explorar, seguir rastros
+						olorosos, etc. Además se puede aprovechar ese tiempo para mejorar
+						el entrenamiento y estrechar las relaciones mascota-propietario.
+						Los gatos necesitan un ejercicio formal que encuentran fuera de la
+						casa (patios, jardines,…). Cuando el gato permanece continuamente
+						dentro de la casa el propietario debe proporcionar al animal una
+						actividad de juego que satisfaga sus necesidades físicas y
+						mentales.</p>
+				</aside>
+			</div>
+
+
+
+
+
+			<footer th:replace="/layouts/footer :: footer"> </footer>
+
+		</div>
+
+
+
+	</div>
+
+
+
+	<script type="text/javascript"
+		th:src="@{/webjars/jquery/3.6.0/jquery.min.js}"></script>
+	<script type="text/javascript"
+		th:src="@{/webjars/popper.js/2.9.3/umd/popper.min.js}"></script>
 	<script type="text/javascript"
 		th:src="@{/webjars/bootstrap/5.2.3/js/bootstrap.min.js}"></script>
 
-		
+
 
 </body>
 </html>
