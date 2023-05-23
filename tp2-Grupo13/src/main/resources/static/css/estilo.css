@@ -68,7 +68,7 @@ body {
             .grid-main{
             height: 75vh;
 
-            margin-bottom: 290px;
+/*             margin-bottom: 290px; */
             margin-top: 0;
             }
       		.article-consejos{
@@ -135,7 +135,7 @@ body {
             .grid-main{
             height: 80vh;
 
-            margin-bottom: 290px;
+/*             margin-bottom: 290px; */
             margin-top: 0;
             }
       		.article-consejos{
@@ -256,7 +256,7 @@ body {
 }
 
 .index-image {
-	margin-top: 10px;
+/* 	margin-top: 10px; */
 	border-radius: 5px;
 	width: 220px;
 	height: 180px;
@@ -266,34 +266,34 @@ body {
 	padding: 10px;
 }
 /*=================ESTILO PRODUCTOS========================*/
-.galeria-productos {
-	list-style: none;
-	height: 75vh;
-	border-radius: 7px;
-	box-shadow: 4px 3px 10px 0 #212121;
-	border: 2px solid #00BCD4;
-	background-color: #333;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 1fr 1fr;
-	margin-top: 30px;
-	padding: 0;
-}
+/* .galeria-productos { */
+/* 	list-style: none; */
+/* 	height: 75vh; */
+/* 	border-radius: 7px; */
+/* 	box-shadow: 4px 3px 10px 0 #212121; */
+/* 	border: 2px solid #00BCD4; */
+/* 	background-color: #333; */
+/* 	display: grid; */
+/* 	grid-template-columns: 1fr 1fr; */
+/* 	grid-template-rows: 1fr 1fr; */
+/* 	margin-top: 30px; */
+/* 	padding: 0; */
+/* } */
 
-.productos-image {
-	margin: 30px 10px 15px 10px;
-	border-radius: 5px;
-	width: 200px;
-	height: 200px;
-	transition-property: filter;
-	transition-duration: .5s;
-}
+/* .productos-image { */
+/* 	margin: 30px 10px 15px 10px; */
+/* 	border-radius: 5px; */
+/* 	width: 200px; */
+/* 	height: 200px; */
+/* 	transition-property: filter; */
+/* 	transition-duration: .5s; */
+/* } */
 
-.productos-image:hover {
-	filter: sepia(2);
-	transition-duration: 1s;
-	cursor: pointer;
-}
+/* .productos-image:hover { */
+/* 	filter: sepia(2); */
+/* 	transition-duration: 1s; */
+/* 	cursor: pointer; */
+/* } */
 
 .div-boton {
 	position: relative;
@@ -322,6 +322,9 @@ body {
 	color: white;
 }
 
+.formulario-producto{
+	margin-top: 100px;
+}
 /*======================================================*/
 
 /*====================ESTILO CONSEJOS===================*/
@@ -345,7 +348,8 @@ body {
 	border-radius: 7px;
 	box-shadow: 4px 3px 10px 0 #212121;
 	border: 2px solid #00BCD4;
-	background-color: #333;
+	margin-top: 50px;
+/* 	background-color: #333; */
 /* 	display: grid; */
 /* 	grid-template-columns: 1fr; */
 /* 	grid-template-rows: 1fr; */
@@ -362,7 +366,7 @@ body {
 	border-radius: 7px;
 	box-shadow: 4px 3px 10px 0 #212121;
 	border: 2px solid #00BCD4;
-	background-color: #333;
+/* 	background-color: #333; */
 /* 	display: grid; */
 /* 	grid-template-columns: 1fr 1fr 1fr; */
 /* 	grid-template-rows: 1fr 1fr 1fr; */

@@ -1,71 +1,117 @@
 <!DOCTYPE html>
-<html xmlns:th="http://thymeleaf.org" lang="es">
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Productos</title>
-<link rel="stylesheet" th:href="@{/css/estilo.css}"/>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--  LINK PARA AGREGAR ARCHIVO CSS -->
+<link rel="stylesheet" th:href="@{/css/estilo.css}" />
+<!--  LINK PARA AGREGAR BOOTSTRAP -->
 <link rel="stylesheet" type="text/css"
 	th:href="@{/webjars/bootstrap/5.2.3/css/bootstrap.min.css}">
+
+
+<title>Inicio</title>
 </head>
 <body>
-	<div class="grid-container">
-			  <div class="grid-item grid-header">
-              	<header th:replace="~{layouts/header :: header}">
-              	</header>
-              	</div>
-			<div class="grid-item grid-main">
-						<section>
-				<ul class="galeria-productos">
-				<li>
-				<figure>
-				<img class="productos-image" src="/images/bandeja_sanitaria.png" alt="Bandeja sanitaria" width="300" height="300">
-				<figcaption>Bandeja sanitaria para gato/a</figcaption>
-				</figure>
-				</li>
-				
-				<li>
-				<figure>
-				<img class="productos-image" src="/images/cepillo_limpieza.png" alt="Cepillo para lavado" width="300" height="300">
-				<figcaption>Cepillo para lavado c/ dispenser de jabon </figcaption>
-				</figure>
-				</li>
-				
-				<li>
-				<figure>
-				<img class="productos-image" src="/images/cepillo.png" alt="Cepillo para ropa" width="300" height="300">
-				<figcaption>Cepillo para sacar pelusa de la ropa</figcaption>
-				</figure>
-				</li>
-				
-					<li>
-				<figure>
-				<img class="productos-image" src="/images/juguete.png" alt="Juguete" width="300" height="300">
-				<figcaption>Juguete trenzado para mordisquear</figcaption>
-				</figure>
-				</li>
-				
-				<div class="div-boton">
-					<button class="button"><a href="/nuevo_producto">Nuevo producto</a></button>
-				</div>
-				
-				</ul>
-				</section>
-				
-				
-			</div>
-			
-			 <div class="grid-item grid-aside">
-					<div class="aside-text">ASIDE</div>
-			 </div>
-                <div class="grid-item grid-footer">
-                    <p><strong><em>Paseau</em></strong> - Diseñado por el <strong>Grupo 13</strong> – Jujuy – República Argentina - </p>
 
-                </div>
+	<div class="container-fluid">
+
+		<header th:replace="/layouts/header :: header"> </header>
+
+
+
+		<div class="row m-3 vh-100 ">
+
+
+
+
+			<!-- INICIO DEL MAIN -->
+			<main class="col-lg-8  col-sm-12 col-md-12 grid-main mt-5">
+
+				<!-- INICIO DEL SECTION -->
+				<section class="bg-dark formulario-contacto">
+								 		<div class="col text-light ">
+							<p class=" bg-info p-2 fs-4">Lista de productos</p>	</div>
+							<table class="table table-dark table-hover">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Código</th>
+                <th>Precio</th>
+                <th>Categoría</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="producto : ${productos}">
+                <td th:text="${producto.nombre}"></td>
+                <td th:text="${producto.codigo}"></td>
+                <td th:text="${producto.precio}"></td>
+                <td th:text="${producto.categoria}"></td>
+            </tr>
+        </tbody>
+    </table>
+    
+ 
+
+						
+							<div class="d-flex justify-content-center mt-2  mb-2 ">
+						<a href="/productos/nuevo" class="btn btn-info text-light" role="button">Nuevo</a>
+					</div>
+				</section>
+				<!-- FIN DEL SECTION -->
+			</main>
+			<!-- FIN DEL MAIN -->
+
+			<div class="col-lg-3 col-md-12  col-sm-12 mt-5 ms-auto ">
+				<aside class="mt-5  bg-dark grid-aside text-light p-4 ">
+					<p>Uñas : En perros que no desgasten bien hay que cortarlas,
+						sobre todo en los espolones. Para los gatos existen en el mercado
+						accesorios para arañar de forma que así los gatos mantienen las
+						uñas en perfecto estado.</p>
+
+					<p>Revisión dental: oprimiendo suavemente la articulación de la
+						boca con los dedos hará que su gato abra la boca y así podrá ver
+						el estado de sus dientes. Los dientes se limpian solos al masticar
+						el pienso seco o morder juguetes especiales. El sarro y el mal
+						aliento han de ser tratados por el veterinario.</p>
+					<p>
+						<strong>EJERCICIO FISICO</strong>
+					<p>El ejercicio es necesario para permitir al perro expresar
+						conductas caninas normales, como explorar, seguir rastros
+						olorosos, etc. Además se puede aprovechar ese tiempo para mejorar
+						el entrenamiento y estrechar las relaciones mascota-propietario.
+						Los gatos necesitan un ejercicio formal que encuentran fuera de la
+						casa (patios, jardines,…). Cuando el gato permanece continuamente
+						dentro de la casa el propietario debe proporcionar al animal una
+						actividad de juego que satisfaga sus necesidades físicas y
+						mentales.</p>
+				</aside>
+			</div>
+
+
+
+
+
+			
+
+		</div>
+
+<footer th:replace="/layouts/footer :: footer"> </footer>
+
 	</div>
 
-	
-		    <script type="text/javascript"
+
+
+	<script type="text/javascript"
+		th:src="@{/webjars/jquery/3.6.0/jquery.min.js}"></script>
+	<script type="text/javascript"
+		th:src="@{/webjars/popper.js/2.9.3/umd/popper.min.js}"></script>
+	<script type="text/javascript"
 		th:src="@{/webjars/bootstrap/5.2.3/js/bootstrap.min.js}"></script>
-	
+
+
+
 </body>
 </html>

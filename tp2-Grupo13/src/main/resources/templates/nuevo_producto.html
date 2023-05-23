@@ -1,28 +1,147 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="es">
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<meta charset="UTF-8">
+
+
+
+<!--  LINK PARA AGREGAR ARCHIVO CSS -->
+<link rel="stylesheet" th:href="@{/css/estilo.css}" />
+<!--  LINK PARA AGREGAR BOOTSTRAP -->
+<link rel="stylesheet" type="text/css"
+	th:href="@{/webjars/bootstrap/5.2.3/css/bootstrap.min.css}">
+
+<title>Nuevo Producto</title>
 </head>
 <body>
-  <h1>Nuevo Product</h1>
-    <form th:action="@{/nuevo_producto}" th:object="${formProducto}" method="post">
-        <label for="nombre">Nombre:</label>
-        <input type="text" th:field="*{nombre}"><br>
+	<div class="container-fluid">
 
-        <label for="precio">Precio:</label>
-        <input type="number" th:field="*{precio}"><br>
+		<header th:replace="/layouts/header :: header"> </header>
 
-        <label for="codigo">C�digo:</label>
-        <input type="number" th:field="*{codigo}"><br>
+		<div class="row m-3 vh-100 ">
 
-        <label for="categoria">Categor�a:</label>
-        <input type="text" th:field="*{categoria}"><br>
 
-        <label for="descuento">Descuento:</label>
-        <input type="number" th:field="*{descuento}"><br>
 
-        <input type="submit" value="Guardar">
-    </form>
+
+			<!-- INICIO DEL MAIN -->
+			<main class="col-lg-8  col-sm-12 col-md-12 grid-main mt-5">
+
+				<!-- INICIO DEL SECTION -->
+				<section class="bg-dark formulario-contacto">
+					<div class="col-12 text-light ">
+						<p class=" bg-info p-2 fs-4">Agregar un producto</p>
+
+					</div>
+					<!-- DIV PARA AGREGAR PRODUCTO -->
+					
+
+							<div>
+										<form action="#" th:action="@{/productos/crear}"
+							th:object="${producto}" method="post" class="text-light justify-content-center formulario-producto">
+
+							<div class="mb-2 col-4 mx-auto">
+								<label for="nombre" class="form-label">Nombre: </label> <input
+									type="text" class="form-control" id="nombre"
+									th:field="*{nombre}">
+							</div>
+
+							<div class="mb-2 col-4 mx-auto">
+								<label for="codigo" class="form-label">Codigo: </label> <input
+									type="number" class="form-control" id="codigo"
+									th:field="*{codigo}">
+							</div>
+
+							<div class="mb-2 col-4 mx-auto">
+								<label for="precio" class="form-label">Precio: </label> <input
+									type="number" class="form-control" id="precio"
+									th:field="*{precio}">
+							</div>
+
+
+							<div class="col-4 mx-auto">
+								<label for="categoria">Categoría:</label> <select
+									class="form-select" id="categoria" th:field="*{categoria}">
+									<option value="">Seleccionar categoría</option>
+									<option value="Alimento">Alimento</option>
+									<option value="Vestimenta">Vestimenta</option>
+									<option value="Cuidado">Cuidado</option>
+									<option value="Juguete">Juguete</option>
+
+								</select>
+							</div>
+
+							<div class="d-flex justify-content-center mt-5">
+								<button type="submit" class="btn btn-info text-light">Guardar</button>
+							</div>
+
+						</form>
+						<!-- FORMULARIO DEL PRODUCTO -->
+							
+							
+
+
+						
+
+
+					</div><!-- FIN DEL DIV CON ROW -->
+					
+
+				</section>
+				<!-- FIN DEL SECTION -->
+			</main>
+			<!-- FIN DEL MAIN -->
+
+			<div class="col-lg-3 col-md-12  col-sm-12 mt-5 ms-auto ">
+				<aside class="mt-5  bg-dark grid-aside text-light p-4 ">
+					<p>Uñas : En perros que no desgasten bien hay que cortarlas,
+						sobre todo en los espolones. Para los gatos existen en el mercado
+						accesorios para arañar de forma que así los gatos mantienen las
+						uñas en perfecto estado.</p>
+
+					<p>Revisión dental: oprimiendo suavemente la articulación de la
+						boca con los dedos hará que su gato abra la boca y así podrá ver
+						el estado de sus dientes. Los dientes se limpian solos al masticar
+						el pienso seco o morder juguetes especiales. El sarro y el mal
+						aliento han de ser tratados por el veterinario.</p>
+					<p>
+						<strong>EJERCICIO FISICO</strong>
+					<p>El ejercicio es necesario para permitir al perro expresar
+						conductas caninas normales, como explorar, seguir rastros
+						olorosos, etc. Además se puede aprovechar ese tiempo para mejorar
+						el entrenamiento y estrechar las relaciones mascota-propietario.
+						Los gatos necesitan un ejercicio formal que encuentran fuera de la
+						casa (patios, jardines,…). Cuando el gato permanece continuamente
+						dentro de la casa el propietario debe proporcionar al animal una
+						actividad de juego que satisfaga sus necesidades físicas y
+						mentales.</p>
+				</aside>
+			</div>
+
+
+
+
+
+
+
+		</div>
+
+		<footer th:replace="/layouts/footer :: footer"> </footer>
+
+	</div>
+
+
+
+	<script type="text/javascript"
+		th:src="@{/webjars/jquery/3.6.0/jquery.min.js}"></script>
+	<script type="text/javascript"
+		th:src="@{/webjars/popper.js/2.9.3/umd/popper.min.js}"></script>
+	<script type="text/javascript"
+		th:src="@{/webjars/bootstrap/5.2.3/js/bootstrap.min.js}"></script>
+
+
+
+
+
+
 </body>
 </html>

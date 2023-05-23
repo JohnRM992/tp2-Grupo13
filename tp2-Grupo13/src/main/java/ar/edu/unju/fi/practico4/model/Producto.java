@@ -1,13 +1,17 @@
 package ar.edu.unju.fi.practico4.model;
 
-public class FormProducto {
+public class Producto {
 	private String nombre;
 	private int codigo;
 	private float precio;
 	private String categoria;
 	private int descuento;
 	
-	public FormProducto(String nombre, int codigo, float precio, String categoria, int descuento) {
+	
+	public Producto() {}
+	
+	
+	public Producto(String nombre, int codigo, float precio, String categoria, int descuento) {
 		super();
 		this.nombre = nombre;
 		this.codigo = codigo;
