@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 //import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -68,6 +69,14 @@ public class WebController {
 	        productos.add(producto);
 	        ModelAndView modelAndView = new ModelAndView("redirect:/productos");
 	        modelAndView.addObject("productos", productos);
+	        return modelAndView;
+	    }
+	    
+	    @GetMapping("/productos/eliminar/{id}")
+	    public ModelAndView eliminarProducto(@PathVariable int id) {
+	        productos.removeIf(producto -> producto.getId() == id);
+	        ModelAndView modelAndView = new ModelAndView("redirect:/productos");
+	        modelAndView.addObject("mensaje", "Producto eliminado correctamente");
 	        return modelAndView;
 	    }
 

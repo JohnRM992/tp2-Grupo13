@@ -6,6 +6,7 @@ public class Producto {
 	private float precio;
 	private String categoria;
 	private int descuento;
+	private int id;
 	
 	
 	public Producto() {}
@@ -19,6 +20,16 @@ public class Producto {
 		this.categoria = categoria;
 		this.descuento = descuento;
 	}
+	
+	 public int getId() {
+	        return id;
+	    }
+
+	    public void setId(int id) {
+	        this.id = id;
+	    }
+	    
+	    
 	public String getNombre() {
 		return nombre;
 	}

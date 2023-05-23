@@ -41,6 +41,7 @@
                 <th>Código</th>
                 <th>Precio</th>
                 <th>Categoría</th>
+                <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
@@ -49,6 +50,9 @@
                 <td th:text="${producto.codigo}"></td>
                 <td th:text="${producto.precio}"></td>
                 <td th:text="${producto.categoria}"></td>
+                <td>
+                    <a class="btn btn-info text-light" th:href="@{/productos/eliminar/{id}(id=${producto.id})}" role="button">Eliminar</a>
+                </td>
             </tr>
         </tbody>
     </table>
