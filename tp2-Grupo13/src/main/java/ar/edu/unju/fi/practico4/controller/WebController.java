@@ -51,7 +51,8 @@ public class WebController {
 	
     @PostMapping("login")
     public String getValidar(Model model,FormLogin formLogin){
-    	if( formLogin.getUsuario().equals("usuario") && formLogin.getPassword().equals("usuario") ) {
+    	if( formLogin.getUsuario().equals("administrador") && formLogin.getPassword().equals("123456") ) {
+    		model.addAttribute("usuario", formLogin.getUsuario());
     		return "index";
     	}
     	

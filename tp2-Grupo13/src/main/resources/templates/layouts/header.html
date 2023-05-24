@@ -10,13 +10,22 @@
 			<nav
 				class="navbar navbar-expand-lg bg-body-tertiary  d-none d-lg-block">
 				<div class="container-fluid">
-
-					<a class="navbar-brand text-light " href="#"> <img
+					
+					<div class="d-flex">
+							<a class="navbar-brand text-light " href="#"> <img
 						src="/images/huella.png" alt="Huella" width="30" height="30"
-						class="d-inline-block align-text-top"> Paseaú
+						class="d-inline-block "> Paseaú
 					</a>
 
-					<button class="navbar-toggler" type="button"
+
+					</div>
+					
+					
+					<div class="d-flex">
+															<
+															<p class="text-info usuario me-5" th:if=${usuario}>Bienvenido/a <span th:text="${usuario}"></span></p>
+							
+							<button class="navbar-toggler" type="button"
 						data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
 						aria-controls="navbarTogglerDemo03" aria-expanded="false"
 						aria-label="Toggle navigation">
@@ -79,7 +88,12 @@
 
 
 		</div>
+							
+								
+					
+					</div>
 
+					
 	</header>
 </body>
 </html>
