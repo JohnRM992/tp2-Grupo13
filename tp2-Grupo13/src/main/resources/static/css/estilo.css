@@ -150,7 +150,21 @@ body {
  				height: 70vh;
  			}
  			     		
-      		
+      		.formulario-login{
+      			height: 70vh;
+      			width: 100vh;
+      			position: relative;
+      			left: 50%;
+      			border-radius: 7px;
+	box-shadow: 4px 3px 10px 0 #212121;
+	border: 2px solid #00BCD4;
+	margin-top: 10%;
+
+      		}
+      		.form-login{
+      		position:relative;
+      		top: 20%;
+      		}
       		
       		body{
       			position: fixed;
@@ -295,35 +309,35 @@ body {
 /* 	cursor: pointer; */
 /* } */
 
-.div-boton {
-	position: relative;
-	display: flex;
-	width: 200%;
-}
+/* .div-boton { */
+/* 	position: relative; */
+/* 	display: flex; */
+/* 	width: 200%; */
+/* } */
 
-.button {
-	border-radius: 5px;
-	border: 2px solid #00BCD4;
-	color: black;
-	text-align: center;
-	text-decoration: none;
-	transition-duration: 0.4s;
-	cursor: pointer;
-	width: 150px;
-	height: 50px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	position: relative;
-	left: 82%;
-}
+/* .button { */
+/* 	border-radius: 5px; */
+/* 	border: 2px solid #00BCD4; */
+/* 	color: black; */
+/* 	text-align: center; */
+/* 	text-decoration: none; */
+/* 	transition-duration: 0.4s; */
+/* 	cursor: pointer; */
+/* 	width: 150px; */
+/* 	height: 50px; */
+/* 	margin-top: 10px; */
+/* 	margin-bottom: 10px; */
+/* 	position: relative; */
+/* 	left: 82%; */
+/* } */
 
-.button:hover {
-	background-color: #00BCD4;
-	color: white;
-}
+/* .button:hover { */
+/* 	background-color: #00BCD4; */
+/* 	color: white; */
+/* } */
 
 .formulario-producto{
-	margin-top: 100px;
+	margin-top: 70px;
 }
 /*======================================================*/
 

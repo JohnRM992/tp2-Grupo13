@@ -4,8 +4,10 @@ public class Producto {
 	private String nombre;
 	private int codigo;
 	private float precio;
-	private String categoria;
 	private int descuento;
+	private String categoria;
+	
+	//private float precioyDescuento;
 	private int id;
 	
 	
@@ -62,7 +64,16 @@ public class Producto {
 	}
 	
 	
-	
+	public double calcularDescuento() {
+        if (this.getDescuento() >= 0 && this.getDescuento()<= 50) {
+            double descuentoDecimal = this.getDescuento() / 100.0;
+            double  precioConDescuento = this.getPrecio() * (1 - descuentoDecimal);
+           
+            return precioConDescuento;
+        } else {
+            throw new IllegalArgumentException("El valor no está en el rango");
+        }
+    }
 	
 	
 	

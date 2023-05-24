@@ -6,12 +6,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-//import org.springframework.web.bind.annotation.PostMapping;
+
 import org.springframework.web.servlet.ModelAndView;
 import java.util.ArrayList;
 import java.util.List;
 
 import ar.edu.unju.fi.practico4.model.Producto;
+import ar.edu.unju.fi.practico4.controller.form.FormLogin;
 
 @Controller
 public class WebController {
@@ -19,11 +20,6 @@ public class WebController {
 	public String getIndexPage(Model model) {
 		return "index";
 	}
-
-//	@GetMapping("/productos")
-//	public String getProductosPage(Model model) {
-//		return "productos";
-//	}
 
 	@GetMapping("/consejos")
 	public String getConsejosPage(Model model) {
@@ -45,6 +41,25 @@ public class WebController {
 		return "contacto";
 	}
 	
+    @GetMapping("login")
+    public String getLoginpage(Model model) {
+    	FormLogin formLogin = new FormLogin();
+    	model.addAttribute("formLogin", formLogin);
+    	return "login";
+    	
+    }
+	
+    @PostMapping("login")
+    public String getValidar(Model model,FormLogin formLogin){
+    	if( formLogin.getUsuario().equals("usuario") && formLogin.getPassword().equals("usuario") ) {
+    		return "index";
+    	}
+    	
+    	model.addAttribute("error","Los datos son incorrectos");
+    	return "login";
+    	
+    	
+    }
 	
 	 private List<Producto> productos = new ArrayList<>();
 
@@ -79,5 +94,7 @@ public class WebController {
 	        modelAndView.addObject("mensaje", "Producto eliminado correctamente");
 	        return modelAndView;
 	    }
+	    
+	
 
 }
