@@ -8,31 +8,31 @@
 	th:href="@{/webjars/bootstrap/5.2.3/css/bootstrap.min.css}">
 </head>
 <body>
-	<div class="grid-container">
-	 <div class="grid-item grid-header">
-              	<header th:replace="~{layouts/header :: header}">
-              	</header>
-              	</div>
+	<div class="container-fluid">
+		<header th:replace="~{layouts/header :: header}"></header>
+		<div class="row m-3 vh-100 ">
 
-			<div class="grid-item grid-main">
-				<section class="section-sucursales">
+	
+
+			<main class="col-lg-8  col-sm-12 col-md-12 me-auto grid-main mt-5">
+				<section class="bg-dark formulario-contacto mt-5 bg-info text-light">
 				
-		<ul class="section-sucursales-ul">
-			<li>
+		<ul class="d-flex justify-content-center section-sucursales-ul">
+			<li class="col-3">
 			<figure>
 			<img class="sucursales-image" src="/images/gps_icono2.png" alt="Bandeja sanitaria">
 			<figcaption>Paso de los Andes 512 <br/><strong>(San Salvador de Jujuy)</strong></figcaption>
 			</figure>
 			</li>
 
-			<li>
+			<li class="col-3">
 				<figure>
 				<img class="sucursales-image" src="/images/gps_icono2.png" alt="Bandeja sanitaria">
 				<figcaption>Urquiza 750<br/><strong>(El Carmén)</strong></figcaption>
 				</figure>
 				</li>
 
-				<li>
+				<li class="col-3">
 					<figure>
 					<img class="sucursales-image" src="/images/gps_icono2.png" alt="Bandeja sanitaria">
 					<figcaption>Tucumán 1255<br/><strong>(Palpalá)</strong></figcaption>
@@ -44,20 +44,52 @@
 			
 		
 			</section>
-			</div>
+		</main>
 			
-			<div class="grid-item grid-aside">
-				<div class="aside-text">ASIDE</div>
-		 </div>
-				 <div class="grid-item grid-footer">
-                <footer th:replace="layouts/footer :: footer">
-                </footer>
+			
+		<div class="col-lg-3 col-md-12  col-sm-12 mt-5 ms-auto ">
+			<aside class="mt-5  bg-dark grid-aside text-light p-4 ">
+				<p>Uñas : En perros que no desgasten bien hay que cortarlas,
+					sobre todo en los espolones. Para los gatos existen en el mercado
+					accesorios para arañar de forma que así los gatos mantienen las
+					uñas en perfecto estado.</p>
+
+				<p>Revisión dental: oprimiendo suavemente la articulación de la
+					boca con los dedos hará que su gato abra la boca y así podrá ver
+					el estado de sus dientes. Los dientes se limpian solos al masticar
+					el pienso seco o morder juguetes especiales. El sarro y el mal
+					aliento han de ser tratados por el veterinario.</p>
+				<p>
+					<strong>EJERCICIO FISICO</strong>
+				<p>El ejercicio es necesario para permitir al perro expresar
+					conductas caninas normales, como explorar, seguir rastros
+					olorosos, etc. Además se puede aprovechar ese tiempo para mejorar
+					el entrenamiento y estrechar las relaciones mascota-propietario.
+					Los gatos necesitan un ejercicio formal que encuentran fuera de la
+					casa (patios, jardines,…). Cuando el gato permanece continuamente
+					dentro de la casa el propietario debe proporcionar al animal una
+					actividad de juego que satisfaga sus necesidades físicas y
+					mentales.</p>
+			</aside>
+		</div>
+
+				 
+                
+                
                 </div>
 
 	</div>
+
+	<footer th:replace="layouts/footer :: footer">
+</div>
 	
-		 <script type="text/javascript"
-		th:src="@{/webjars/bootstrap/5.2.3/js/bootstrap.min.js}"></script>
-	
+	<script type="text/javascript"
+	th:src="@{/webjars/jquery/3.6.0/jquery.min.js}"></script>
+<script type="text/javascript"
+	th:src="@{/webjars/popper.js/2.9.3/umd/popper.min.js}"></script>
+<script type="text/javascript"
+	th:src="@{/webjars/bootstrap/5.2.3/js/bootstrap.min.js}"></script>
+
+
 </body>
 </html>
