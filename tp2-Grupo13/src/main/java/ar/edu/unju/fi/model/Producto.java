@@ -1,18 +1,60 @@
-package ar.edu.unju.fi.practico4.model;
+package ar.edu.unju.fi.model;
 
+
+import org.springframework.stereotype.Component;
+
+/*VALIDACIONES*/
+
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.Positive;
+
+/**
+ * Representa un producto ofrecido
+ * @author Jonathan R. Mascareño
+ * @version 1.0 date: 2/6/23
+ */
+
+
+
+@Component
 public class Producto {
+	
+	@NotBlank(message="El nombre no puede estar vacio")
 	private String nombre;
+	@Min(value = 1, message="El valor minimo para codigo es 1")
+	@Positive(message="El codigo debe ser un número positivo")
 	private int codigo;
+	//@NotEmpty(message="El precio no puede estar vacio")
+	@Min(value = 1, message="El valor minimo para precio es 1")
+	@Positive(message="El precio debe ser un número positivo")
 	private float precio;
+	@Min(value = 0, message = "El valor minimo permitido es 0")
+	@Max(value = 50, message = "El valor maximo permitido es 50")
 	private int descuento;
+	@NotBlank(message = "Debe seleccionar una provincia")
 	private String categoria;
 	
-	//private float precioyDescuento;
-	private int id;
+	
+	//private int id;
 	
 	
 	public Producto() {}
 	
+	
+	
+	
+	
+	/**
+	 * Constructor parametrizado
+	 * @param nombre es el nombre del producto
+	 * @param codigo es el codigo de identificación del producto
+	 * @param precio es el precio del producto
+	 * @param categoria es la categoria a la que pertenece el producto
+	 * @param descuento es el % de descuento que tiene un producto
+	 */
 	
 	public Producto(String nombre, int codigo, float precio, String categoria, int descuento) {
 		super();
@@ -23,13 +65,13 @@ public class Producto {
 		this.descuento = descuento;
 	}
 	
-	 public int getId() {
-	        return id;
-	    }
-
-	    public void setId(int id) {
-	        this.id = id;
-	    }
+//	 public int getId() {
+//	        return id;
+//	    }
+//
+//	    public void setId(int id) {
+//	        this.id = id;
+//	    }
 	    
 	    
 	public String getNombre() {

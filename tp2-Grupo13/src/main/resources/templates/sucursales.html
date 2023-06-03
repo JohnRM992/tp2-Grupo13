@@ -1,94 +1,115 @@
 <!DOCTYPE html>
-<html xmlns:th="http://thymeleaf.org" lang="es">
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Sucursales</title>
-<link rel="stylesheet" th:href="@{/css/estilo.css}"/>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--  LINK PARA AGREGAR ARCHIVO CSS -->
+<link rel="stylesheet" th:href="@{/css/estilo.css}" />
+<!--  LINK PARA AGREGAR BOOTSTRAP -->
 <link rel="stylesheet" type="text/css"
 	th:href="@{/webjars/bootstrap/5.2.3/css/bootstrap.min.css}">
+
+
+<title>Sucursales</title>
 </head>
 <body>
+
 	<div class="container-fluid">
-		<header th:replace="~{layouts/header :: header}"></header>
-		<div class="row m-3 vh-100 ">
 
-	
+		<header th:replace="~{/layouts/header :: header}"> </header>
 
-			<main class="col-lg-8  col-sm-12 col-md-12 me-auto grid-main mt-5">
-				<section class="bg-dark formulario-contacto mt-5 bg-info text-light">
-				
-		<ul class="d-flex justify-content-center section-sucursales-ul">
-			<li class="col-3">
-			<figure>
-			<img class="sucursales-image" src="/images/gps_icono2.png" alt="Bandeja sanitaria">
-			<figcaption>Paso de los Andes 512 <br/><strong>(San Salvador de Jujuy)</strong></figcaption>
-			</figure>
-			</li>
 
-			<li class="col-3">
-				<figure>
-				<img class="sucursales-image" src="/images/gps_icono2.png" alt="Bandeja sanitaria">
-				<figcaption>Urquiza 750<br/><strong>(El Carmén)</strong></figcaption>
-				</figure>
-				</li>
 
-				<li class="col-3">
-					<figure>
-					<img class="sucursales-image" src="/images/gps_icono2.png" alt="Bandeja sanitaria">
-					<figcaption>Tucumán 1255<br/><strong>(Palpalá)</strong></figcaption>
-					</figure>
-					</li>
+		<div class="row m-3">
 
-			</ul>
+
+
+
+			<!-- INICIO DEL MAIN -->
+			<main class="col-xl-9 col-lg-12  col-sm-12 col-md-12 grid-main mt-5">
+
+				<!-- INICIO DEL SECTION -->
+				<section class="bg-dark formulario-contacto">
+								 		<div class="col text-light">
+							<p class=" bg-info p-2 fs-4">Lista de Sucursales</p>	</div>
+							<table class="table table-dark table-hover ">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Dirección</th>
+                <th>Provincia</th>
+                <th>Fecha de inicio</th>
+                <th>Email</th>
+                <th>Telefono</th>
+                <th>Cantidad de empleados</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="sucursal : ${sucursales}">
+                <td th:text="${sucursal.nombre}"></td>
+                <td th:text="${sucursal.direccion}"></td>
+                <td th:text="${sucursal.provincia}"></td>
+                <td th:text="${sucursal.fechaInicio}"></td>
+                <td th:text="${sucursal.email}"></td>
+                <td th:text="${sucursal.telefono}"></td>
+                <td th:text="${sucursal.cantidadEmpleados}"></td>
+				<td>
+				<a class="btn btn-secondary text-light col-lg-12 col-md-12 col-sm-12"
+									th:href="@{/sucursal/modificar/{nombre}(nombre=${sucursal.nombre})}"
+									role="button">Editar</a>
+									<div class="mt-lg-2 mt-md-2 mt-sm-2"></div>
+				<a class="btn btn-info text-light col-lg-12 col-md-12 col-sm-12"
+									th:href="@{/sucursal/eliminar/{nombre}(nombre=${sucursal.nombre})}"
+									role="button">Eliminar</a></td>
+				</tr>
+        </tbody>
+    </table>
+    
+ 
+
+						
+							<div class="d-flex justify-content-center mt-2  mb-2 ">
+						<a th:href="@{/sucursal/nuevo}" class="btn btn-info text-light" role="button">Nuevo</a>
+					</div>
+				</section>
+				<!-- FIN DEL SECTION -->
+			</main>
+			<!-- FIN DEL MAIN -->
+
+			<div class="col-xl-3 col-lg-12 col-md-12  col-sm-12 mt-5 ms-auto ">
+				<aside class="mt-5  bg-dark grid-aside text-light p-4 ">
+						<h5 class="">Paseador/Peluquero disponible</h5>
+					<ul>
+						<li th:each="trabajador : ${trabajadores}"
+							th:text="${trabajador.nombre}"></li>
+					</ul>
+				</aside>
+			</div>
+
+
+
+
 
 			
-		
-			</section>
-		</main>
-			
-			
-		<div class="col-lg-3 col-md-12  col-sm-12 mt-5 ms-auto ">
-			<aside class="mt-5  bg-dark grid-aside text-light p-4 ">
-				<p>Uñas : En perros que no desgasten bien hay que cortarlas,
-					sobre todo en los espolones. Para los gatos existen en el mercado
-					accesorios para arañar de forma que así los gatos mantienen las
-					uñas en perfecto estado.</p>
 
-				<p>Revisión dental: oprimiendo suavemente la articulación de la
-					boca con los dedos hará que su gato abra la boca y así podrá ver
-					el estado de sus dientes. Los dientes se limpian solos al masticar
-					el pienso seco o morder juguetes especiales. El sarro y el mal
-					aliento han de ser tratados por el veterinario.</p>
-				<p>
-					<strong>EJERCICIO FISICO</strong>
-				<p>El ejercicio es necesario para permitir al perro expresar
-					conductas caninas normales, como explorar, seguir rastros
-					olorosos, etc. Además se puede aprovechar ese tiempo para mejorar
-					el entrenamiento y estrechar las relaciones mascota-propietario.
-					Los gatos necesitan un ejercicio formal que encuentran fuera de la
-					casa (patios, jardines,…). Cuando el gato permanece continuamente
-					dentro de la casa el propietario debe proporcionar al animal una
-					actividad de juego que satisfaga sus necesidades físicas y
-					mentales.</p>
-			</aside>
 		</div>
 
-				 
-                
-                
-                </div>
+<footer th:replace="~{/layouts/footer :: footer}"> </footer>
 
 	</div>
 
-	<footer th:replace="layouts/footer :: footer">
-</div>
-	
+
+
 	<script type="text/javascript"
-	th:src="@{/webjars/jquery/3.6.0/jquery.min.js}"></script>
-<script type="text/javascript"
-	th:src="@{/webjars/popper.js/2.9.3/umd/popper.min.js}"></script>
-<script type="text/javascript"
-	th:src="@{/webjars/bootstrap/5.2.3/js/bootstrap.min.js}"></script>
+		th:src="@{/webjars/jquery/3.6.0/jquery.min.js}"></script>
+	<script type="text/javascript"
+		th:src="@{/webjars/popper.js/2.9.3/umd/popper.min.js}"></script>
+	<script type="text/javascript"
+		th:src="@{/webjars/bootstrap/5.2.3/js/bootstrap.min.js}"></script>
+
 
 
 </body>

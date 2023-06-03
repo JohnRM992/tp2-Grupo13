@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<title>Consejos</title>
+
+<link th:rel="stylesheet" type="text/css" th:href="@{/css/estilo.css}" />
+<link th:rel="stylesheet" type="text/css"
+	th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
+</head>
+<body>
+	<header th:replace="~{/layouts/header :: header}"> </header>
+	<div class="container div-formulario-sucursales">
+
+		<div class="bg-dark formulario-sucursales">
+
+
+			<div>
+				<form action="#"
+					th:action="${editando}?@{/consejo/modificar/{id} (id=${consejo.id})}:@{/consejo/guardar}"
+					th:object="${consejo}" method="post"
+					class="text-light  formulario-sucursales-dentro">
+
+
+
+
+					<!-- DIV QUE ENVUELVE TODO EL CAMPO TITULO -->
+					<div
+						class="mb-md-1 row col-lg-12  col-sm-12 justify-content-center ">
+					
+						 
+
+						<div class="col-lg-6 col-sm-6 align-self-center">
+							<input type="text" class="form-control" id="titulo"
+								th:field="*{titulo}" placeholder="Titulo">
+							<p class="form-text text-danger"
+								th:if="${#fields.hasErrors('titulo')}" th:errors="*{titulo}" />
+						</div>
+
+					</div>
+					<!-- DIV QUE ENVUELVE TODO EL CAMPO TITULO -->
+
+					<!-- DIV QUE ENVUELVE TODO EL CAMPO AUTOR -->
+					<div
+						class="mb-md-1 row col-lg-12  col-sm-12 justify-content-center ">
+							
+
+						<div class="col-lg-6 col-sm-6 align-self-center">
+
+
+							<input type="text" class="form-control" id="autor"
+								th:field="*{autor}" placeholder="Autor">
+
+							<p class="form-text text-danger"
+								th:if="${#fields.hasErrors('autor')}" th:errors="*{autor}" />
+						</div>
+					</div>
+					<!-- DIV QUE ENVUELVE TODO EL CAMPO AUTOR -->
+
+					<!-- DIV QUE ENVUELVE TODO EL CAMPO CONTENIDO -->
+
+					<div
+						class="mb-md-1 row col-lg-12  col-sm-12 justify-content-center ">
+
+						<div class="col-lg-6 col-sm-6 align-self-center">
+							
+								<textarea class="form-control " style="height:350px"
+									placeholder="Escriba aqui su texto" id="floatingTextarea2"
+									 th:field="*{contenido}"></textarea>
+
+						
+						</div>
+
+						<div class="d-flex justify-content-center mt-lg-3 mt-md-1 mt-sm-1">
+							<button type="submit"
+								class="btn btn-info text-light mb-lg-4 mb-md-3 mb-sm-3"
+								th:text="${editando}?'Modificar' : 'Guardar' "></button>
+						</div>
+					</div>
+				</form>
+				<!-- FORMULARIO DE CONSEJO -->
+
+			</div>
+			<!-- FIN DEL DIV QUE ENVUELVE TODO EL FORMULARIO -->
+
+
+		</div>
+
+
+
+
+	</div>
+
+
+
+	<footer th:replace="~{/layouts/footer :: footer}"> </footer>
+
+
+
+	<script type="text/javascript"
+		th:src="@{/webjars/jquery/3.6.0/jquery.min.js}"></script>
+	<script type="text/javascript"
+		th:src="@{/webjars/popper.js/2.9.3/umd/popper.min.js}"></script>
+	<script type="text/javascript"
+		th:src="@{/webjars/bootstrap/5.2.3/js/bootstrap.min.js}"></script>
+
+
+
+
+</body>
+</html>
+

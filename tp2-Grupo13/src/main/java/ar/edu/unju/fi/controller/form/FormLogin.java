@@ -1,4 +1,4 @@
-package ar.edu.unju.fi.practico4.controller.form;
+package ar.edu.unju.fi.controller.form;
 
 public class FormLogin {
 		public String usuario;

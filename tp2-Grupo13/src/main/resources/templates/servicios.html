@@ -1,64 +1,161 @@
 <!DOCTYPE html>
-<html xmlns:th="http://thymeleaf.org" lang="es">
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Servicio de paseos</title>
-<link rel="stylesheet" th:href="@{/css/estilo.css}"/>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--  LINK PARA AGREGAR ARCHIVO CSS -->
+<link rel="stylesheet" th:href="@{/css/estilo.css}" />
+<!--  LINK PARA AGREGAR BOOTSTRAP -->
 <link rel="stylesheet" type="text/css"
 	th:href="@{/webjars/bootstrap/5.2.3/css/bootstrap.min.css}">
-</head>
-<body background=../static/images/fondo.jpg>
-	<div class="grid-container">
-	 <div class="grid-item grid-header">
-              	<header th:replace="~{layouts/header :: header}">
-              	</header>
-              	</div>
-		<div class="grid-item grid-main">
 
-			<section class="section-paseos">
-				<table border="2">
-					<tr>
-						<td>Dia</td>
-						<td>Lunes</td>
-						<td>Martes</td>
-						<td>Miercoles</td>
-						<td>Jueves</td>
-						<td>Viernes</td>
-						<td>Sabado</td>
-					<tr>
-						<td>Horarios</td>
-						<td>9 a 12 - 16 a 18</td>
-						<td>9 a 12 - 16 a 18</td>
-						<td>9 a 12 - 16 a 18</td>
-						<td>9 a 12 - 16 a 18</td>
-						<td>9 a 12 - 16 a 18</td>
-						<td>9 a 12 - 16 a 18</td>
-					<tr>
-						<td>Paseador</td>
-						<td>Juan Perez</td>
-						<td>Lucas Diaz</td>
-						<td>Juan Perez</td>
-						<td>Maria Gomez</td>
-						<td>Lucas Dias</td>
-						<td>Roberto Vasquez</td>
+
+<title>Servicios</title>
+</head>
+<body>
+
+	<div class="container-fluid">
+
+		<header th:replace="~{/layouts/header :: header}"> </header>
+
+
+
+		<div class="row m-3">
+
+
+
+
+			<!-- INICIO DEL MAIN -->
+			<main class="col-xl-9 col-lg-12  col-sm-12 col-md-12 grid-main mt-5">
+
+				<!-- INICIO DEL SECTION -->
+				<section class="bg-dark formulario-contacto">
+					<div class="col text-light ">
+						<p class=" bg-info p-2 fs-4">Servicios</p>
+					</div>
+
+
+					<table class="table table-dark table-hover">
+						<thead>
+							<tr>
+								<th>Nombre</th>
+								<th>Dirección</th>
+								<th>Teléfono</th>
+								<th>Tarifa</th>
+								<th>Tipo de Servicio</th>
+								<th>Días Disponibles</th>
+								<th>Horarios Disponibles</th>
+								<th>Acciones</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr th:each="servicio : ${servicios}">
+								<td th:text="${servicio.nombre}"></td>
+								<td th:text="${servicio.direccion}"></td>
+								<td th:text="${servicio.telefono}"></td>
+								<td th:text="${servicio.tarifa}"></td>
+								<td th:text="${servicio.tipoDeServicio}"></td>
+								<td>
+									<ul>
+										<li class="list-group-item"
+											th:each="dia : ${servicio.diaDisponible}" th:text="${dia}"></li>
+									</ul>
+								</td>
+								<td>
+									<ul>
+										<li class="list-group-item"
+											th:each="horario : ${servicio.horarioDisponible}"
+											th:text="${horario}"></li>
+									</ul>
+								</td>
+								<td><a class="btn btn-secondary text-light"
+									th:href="@{/servicio/modificar/{nombre}(nombre=${servicio.nombre})}"
+									role="button">Editar</a> <a class="btn btn-info text-light"
+									th:href="@{/servicio/eliminar/{nombre}(nombre=${servicio.nombre})}"
+									role="button">Eliminar</a></td>
+							</tr>
+						</tbody>
 					</table>
-			</section>
-			
+
+
+
+
+
+					<!-- 							<table class="table table-dark table-hover"> -->
+					<!--         <thead> -->
+					<!--             <tr> -->
+					<!--                 <th>Nombre</th> -->
+					<!--                 <th>Dirección</th> -->
+					<!--                 <th>Provincia</th> -->
+					<!--                 <th>Fecha de inicio</th> -->
+					<!--                 <th>Email</th> -->
+					<!--                 <th>Telefono</th> -->
+					<!--                 <th>Cantidad de empleados</th> -->
+					<!--                 <th>Acciones</th> -->
+					<!--             </tr> -->
+					<!--         </thead> -->
+					<!--         <tbody> -->
+					<!--             <tr th:each="sucursal : ${sucursales}"> -->
+					<!--                 <td th:text="${sucursal.nombre}"></td> -->
+					<!--                 <td th:text="${sucursal.direccion}"></td> -->
+					<!--                 <td th:text="${sucursal.provincia}"></td> -->
+					<!--                 <td th:text="${sucursal.fechaInicio}"></td> -->
+					<!--                 <td th:text="${sucursal.email}"></td> -->
+					<!--                 <td th:text="${sucursal.telefono}"></td> -->
+					<!--                 <td th:text="${sucursal.cantidadEmpleados}"></td> -->
+					<!--                 <td> -->
+					<!--                 	 <a class="btn btn-secondary text-light" th:href="@{/sucursal/modificar/{nombre}(nombre=${sucursal.nombre})}" role="button">Editar</a> -->
+					<!--                     <a class="btn btn-info text-light" th:href="@{/sucursal/eliminar/{nombre}(nombre=${sucursal.nombre})}" role="button">Eliminar</a> -->
+					<!--                 </td> -->
+					<!--             </tr> -->
+					<!--         </tbody> -->
+					<!--     </table> -->
+
+
+
+
+					<div class="d-flex justify-content-center mt-2  mb-2 ">
+						<a th:href="@{/servicio/nuevo}" class="btn btn-info text-light"
+							role="button">Nuevo</a>
+					</div>
+				</section>
+				<!-- FIN DEL SECTION -->
+			</main>
+			<!-- FIN DEL MAIN -->
+
+			<div class="col-lg-3 col-md-12  col-sm-12 mt-5 ms-auto ">
+				<aside class="mt-5  bg-dark grid-aside text-light p-4 ">
+					<ul>
+						<li th:each="trabajador : ${trabajadores}"
+							th:text="${trabajador.nombre}"></li>
+					</ul>
+				</aside>
+			</div>
+
+
+
+
+
+
+
 		</div>
 
-
-		<div class="grid-item grid-aside">
-			<div class="aside-text">ASIDE</div>
-	 </div>
-			 <div class="grid-item grid-footer">
-                <footer th:replace="layouts/footer :: footer">
-                </footer>
-                </div>
+		<footer th:replace="~{/layouts/footer :: footer}"> </footer>
 
 	</div>
-	
-		    <script type="text/javascript"
+
+
+
+	<script type="text/javascript"
+		th:src="@{/webjars/jquery/3.6.0/jquery.min.js}"></script>
+	<script type="text/javascript"
+		th:src="@{/webjars/popper.js/2.9.3/umd/popper.min.js}"></script>
+	<script type="text/javascript"
 		th:src="@{/webjars/bootstrap/5.2.3/js/bootstrap.min.js}"></script>
-	
+
+
+
 </body>
 </html>

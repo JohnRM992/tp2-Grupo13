@@ -3,6 +3,7 @@ body {
 	
 	background-image: url(../images/wallpaper.jpg);
 	background-size: cover;
+	
 }
 
 
@@ -16,13 +17,15 @@ body {
 .grid-footer {
 			border: 2px solid #00BCD4;
 			box-shadow: 4px 3px 10px 0 #212121;
-			height: 6vh;
+/* 			height: 6vh; */
 			text-align: center;
+			padding-top: 5px;
+			
 }
 
 
 /*================RESPONSIDIVDAD MEDIA QUERIES============*/
-	  @media (max-width: 992px) {
+	  @media (min-width: 576px) {
             .grid-aside {
             height: 80vh;
             overflow: auto;
@@ -39,10 +42,14 @@ body {
       			    overflow: auto;
       		
       		}
+      		.formulario-sucursales{
+      				
+      			margin-top: 6%;
+      		}
         }
 
 
-         @media (max-width: 1140px) {
+         @media (min-width: 768px) {
             .grid-aside {
 					height: 77vh;
 					overflow: auto;
@@ -60,9 +67,10 @@ body {
       			    overflow: auto;
       		
       		}
+
         }
          
-                 @media (max-width: 1650px) {
+                 @media (min-width: 992px) {
             .grid-aside {
 					height: 77vh;
 					overflow: auto;
@@ -84,58 +92,20 @@ body {
       		.formulario-contacto{
       				height: 77vh;
       		}
-        }
-            @media (min-width: 1651px) {
-
-            .grid-aside {
-					height: 70vh;
-					overflow: auto;
-            
-            }
-            .grid-main{
-					height: 80vh;
-					margin-top: 0;
-            }
-      		.article-consejos{
-      									
-      				height: 69vh;
-      			    overflow: auto;
       		
-      		}
-      	
- 			.formulario-contacto{
- 			
- 				height: 70vh;
- 			}
- 			     		
-      		.formulario-login{
-      			height: 70vh;
-      			width: 100vh;
-      			position: relative;
-      			left: 50%;
-      			border-radius: 7px;
-				box-shadow: 4px 3px 10px 0 #212121;
-				border: 2px solid #00BCD4;
-				margin-top: 10%;
-
-      		}
-      		.form-login{
-      		position:relative;
-      		top: 20%;
-      		}
-      		
-      		body{
-      			position: fixed;
+      		.formulario-sucursales{
+      				
+      				margin-top: 7em;
       		}
         }
-        
+
 /*==================================================*/
 
 /*=============BARRA DE NAVEGACIÓN PANTALLA GRANDE==========*/
 
 .naveg1 {
 				position: relative; border : 2px solid #00BCD4;
-				height: 6vh;
+/* 				height: 6vh; */
 				box-shadow: 4px 3px 10px 0 #212121;
 				border: 2px solid #00BCD4;
 }
@@ -230,11 +200,34 @@ body {
 .index-article-text {
 				padding: 7px;
 }
+
+.index-slide{
+		box-shadow: 4px 3px 10px 0 #212121;
+				margin-bottom: 20px;
+				padding: 10px;
+				border: 2px solid #00BCD4;
+				border-radius: 7px;
+				height: 77vh;
+				display: flex;
+}
 /*=================ESTILO PRODUCTOS========================*/
 
-.formulario-producto{
+.formulario-productos-dentro{
 				margin-top: 70px;
 }
+.formulario-productos {
+			
+/*       			position: relative; */
+/*       				height: 70vh; */
+/*       			width: 100vh; */
+/*       			left: 50%; */
+      			border-radius: 7px;
+				box-shadow: 4px 3px 10px 0 #212121;
+				border: 2px solid #00BCD4;
+			margin-top: 3em;
+				
+}
+
 /*======================================================*/
 
 /*====================ESTILO CONSEJOS===================*/
@@ -282,7 +275,29 @@ body {
 	height: 100px;
 	margin-bottom: 10px;
 }
+.div-formulario-sucursales{
+	
+	position:relative;
+	top: 4%;
+}
+.formulario-sucursales {
+			
+/*       			position: relative; */
+/*       				height: 70vh; */
+/*       			width: 100vh; */
+/*       			left: 50%; */
+      			border-radius: 7px;
+				box-shadow: 4px 3px 10px 0 #212121;
+				border: 2px solid #00BCD4;
+/* 				height: 47em; */
+/* 				margin-top: 3%; */
+				
+}
 
+.formulario-sucursales-dentro{
+		
+				margin-top: 40px;	
+}
 /*==========================================================*/
 
 /*========================ESTILO SERVICIOS===================*/
@@ -294,4 +309,15 @@ body {
 	/* margin-top: 15px;
 	padding: 10px;
 	padding-left: 15px; */
+}
+
+.formulario-servicios{
+			border-radius: 7px;
+				box-shadow: 4px 3px 10px 0 #212121;
+				border: 2px solid #00BCD4;
+			margin-top: 7em;
+}
+
+.formulario-servicios-dentro{
+				margin-top: 70px;
 }

@@ -15,14 +15,14 @@
 
 	<div class="container-fluid">
 
-		<header th:replace="/layouts/header :: header"> </header>
+		<header th:replace="~{/layouts/header :: header}"> </header>
 
 
 
 		<div class="row m-3 vh-100">
 
 			<!-- INICIO DEL MAIN -->
-			<main class="col-lg-8  col-sm-12 col-md-12 me-auto grid-main mt-5">
+			<main class="col-xl-9 col-lg-12  col-sm-12 col-md-12 grid-main mt-5">
 
 				<section class="bg-dark formulario-contacto mt-5 bg-info">
 
@@ -86,7 +86,8 @@
 
 							<div class="d-flex justify-content-center">
 								<div class="col-md-8 col-sm-8">
-									<label for="inputState" class="form-label">Provincia</label> <select
+									<label for="inputState" class="form-label">Provincia</label> 
+									<select
 										id="inputState" class="form-select">
 										<option selected>Buenos Aires</option>
 										<option selected>Cordoba</option>
@@ -126,32 +127,16 @@
 
 			<div class="col-lg-3 col-md-12  col-sm-12 mt-5 ms-auto ">
 				<aside class="mt-5  bg-dark grid-aside text-light p-4 ">
-					<p>Uñas : En perros que no desgasten bien hay que cortarlas,
-						sobre todo en los espolones. Para los gatos existen en el mercado
-						accesorios para arañar de forma que así los gatos mantienen las
-						uñas en perfecto estado.</p>
-
-					<p>Revisión dental: oprimiendo suavemente la articulación de la
-						boca con los dedos hará que su gato abra la boca y así podrá ver
-						el estado de sus dientes. Los dientes se limpian solos al masticar
-						el pienso seco o morder juguetes especiales. El sarro y el mal
-						aliento han de ser tratados por el veterinario.</p>
-					<p>
-						<strong>EJERCICIO FISICO</strong>
-					<p>El ejercicio es necesario para permitir al perro expresar
-						conductas caninas normales, como explorar, seguir rastros
-						olorosos, etc. Además se puede aprovechar ese tiempo para mejorar
-						el entrenamiento y estrechar las relaciones mascota-propietario.
-						Los gatos necesitan un ejercicio formal que encuentran fuera de la
-						casa (patios, jardines,…). Cuando el gato permanece continuamente
-						dentro de la casa el propietario debe proporcionar al animal una
-						actividad de juego que satisfaga sus necesidades físicas y
-						mentales.</p>
+				<h5 class="">Paseador/Peluquero disponible</h5>
+					<ul>
+						<li th:each="trabajador : ${trabajadores}"
+							th:text="${trabajador.nombre}"></li>
+					</ul>
 				</aside>
 			</div>
 
 
-			<footer th:replace="/layouts/footer :: footer"> </footer>
+			<footer th:replace="~{/layouts/footer :: footer}"> </footer>
 
 		</div>
 
