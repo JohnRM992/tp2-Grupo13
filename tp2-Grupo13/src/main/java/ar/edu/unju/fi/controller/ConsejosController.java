@@ -14,7 +14,6 @@ import org.springframework.web.servlet.ModelAndView;
 //import ar.edu.unju.fi.controller.form.FormLogin;
 import ar.edu.unju.fi.listas.ListaConsejo;
 import ar.edu.unju.fi.model.Consejo;
-import ar.edu.unju.fi.model.Servicio;
 import jakarta.validation.Valid;
 
 @Controller
@@ -42,6 +41,8 @@ public class ConsejosController {
 	    return "detalle_consejo";
 	}
 	
+	
+	//Muestra el formulario para nuevo consejo
 	@GetMapping("/consejo/nuevo")
 	public String mostrarFormularioNuevoServicio(Model model) {
 		boolean editando = false;
@@ -52,6 +53,7 @@ public class ConsejosController {
 		return "nuevo_consejo";
 	}
 
+	//Solicitud para guardar lo rellenado en un formulario
 	@PostMapping("/consejo/guardar")
 	public ModelAndView getGuardarConsejoPage(@Valid @ModelAttribute("consejo") Consejo consejo, BindingResult result) {
 
@@ -68,6 +70,8 @@ public class ConsejosController {
 		return modelAndView;
 	}
 
+	
+	//Solicita la pagina de modificación segun un id
 	@GetMapping("consejo/modificar/{id}")
 	public String mostrarFormularioEdicion(@PathVariable("id") Integer id, Model model) {
 		boolean editando = true;
@@ -77,7 +81,7 @@ public class ConsejosController {
 		model.addAttribute("editando", editando);
 		return "nuevo_consejo";
 	}
-
+	//Solicita la modificación de un consejo a traves de su id
 	@PostMapping("/consejo/modificar/{id}")
 	public String editarConsejo(@PathVariable("id") Integer id, @ModelAttribute("consejo") Consejo consejoModificado) {
 		
