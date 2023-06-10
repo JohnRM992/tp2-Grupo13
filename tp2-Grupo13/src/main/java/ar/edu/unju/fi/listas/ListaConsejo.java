@@ -9,19 +9,15 @@ import ar.edu.unju.fi.model.Consejo;
 
 @Component
 public class ListaConsejo {
-	
-private List<Consejo> consejos;
-private int nextId;
-	
-	
-	
+
+	private List<Consejo> consejos;
+	private int nextId;
+
 	public ListaConsejo() {
 		consejos = new ArrayList<Consejo>();
 		nextId = 1;
-	
+
 	}
-
-
 
 	public List<Consejo> getConsejos() {
 		return consejos;
@@ -30,58 +26,54 @@ private int nextId;
 	public Consejo findConsejoById(Integer id) {
 		Consejo consejo = new Consejo();
 		for (Consejo cons : consejos) {
-	        if (cons.getId() != null && cons.getId().equals(id)) {
-	            return cons;
-	        }
-	    }
+			if (cons.getId() != null && cons.getId().equals(id)) {
+				return cons;
+			}
+		}
 		return consejo;
 	}
+
 	public void agregarConsejo(Consejo consejo) {
-		
-		 if (consejos.isEmpty()) {
-		        nextId = 1; 
-		    }
-        consejo.setId(nextId);
-        consejos.add(consejo);
-        nextId++; 
-    }
 
-
-	public void eliminarConsejo(int id) {
-	    
-	    Consejo consejoAEliminar = null;
-	    for (Consejo cons : consejos) {
-	        if (cons.getId() != null && cons.getId() == id) {
-	            consejoAEliminar = cons;
-	            break;
-	        }
-	    }
-
-	    
-	    if (consejoAEliminar != null) {
-	        consejos.remove(consejoAEliminar);
-	        actualizarId();
-	    }
+		if (consejos.isEmpty()) {
+			nextId = 1;
+		}
+		consejo.setId(nextId);
+		consejos.add(consejo);
+		nextId++;
 	}
-	
+
+	public void eliminarConsejo(Integer id) {
+
+		Consejo consejoAEliminar = null;
+		for (Consejo cons : consejos) {
+			if (cons.getId() != null && cons.getId() == id) {
+				consejoAEliminar = cons;
+				break;
+			}
+		}
+
+		if (consejoAEliminar != null) {
+			consejos.remove(consejoAEliminar);
+			actualizarId();
+		}
+	}
+
 	public void actualizarId() {
-	    int nuevoId = 1;
-	    List<Consejo> consejosActualizados = new ArrayList<>();
+		int nuevoId = 1;
+		List<Consejo> consejosActualizados = new ArrayList<>();
 
-	    for (Consejo consejo : consejos) {
-	        consejo.setId(nuevoId);
-	        consejosActualizados.add(consejo);
-	        nuevoId++;
-	    }
+		for (Consejo consejo : consejos) {
+			consejo.setId(nuevoId);
+			consejosActualizados.add(consejo);
+			nuevoId++;
+		}
 
-	    consejos = consejosActualizados;
+		consejos = consejosActualizados;
 	}
 
 	public void setConsejos(List<Consejo> consejos) {
 		this.consejos = consejos;
 	}
-	
-	
-	
 
 }

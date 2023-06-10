@@ -4,6 +4,13 @@ import org.springframework.stereotype.Component;
 
 import jakarta.validation.constraints.NotBlank;
 
+/**
+ * Representa un producto ofrecido
+ * @author Grupo45
+ * @version 1.0 date: 8/6/23
+ */
+
+
 
 @Component
 public class Consejo {
@@ -25,6 +32,17 @@ public class Consejo {
 
 
 
+	/**
+	 * Constructor parametrizado
+	 * @param titulo es el titulo del consejo
+	 * @param contenido es el contenido que tendrá el consejo
+	 * @param autor es el autor del consejo
+	 * @param id es el numero de id que se asigna a cada consejo
+	 * 
+	 */
+	
+	
+	
 
 	public Consejo(String titulo, String contenido, String autor,Integer id) {
 		super();
